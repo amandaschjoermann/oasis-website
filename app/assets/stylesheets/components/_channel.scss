@@ -1,0 +1,49 @@
+.pill-category {
+  white-space: nowrap;
+  border: 2px solid #EEF3F1;
+  border-radius: 2px;
+  transition: 0.1s ease;
+  cursor: pointer;
+  &:hover {
+    transform: translate(0px, -1px)
+  }
+}
+
+.card-channel {
+  border: 2px solid #d5e8e0;
+}
+
+.card-tip {
+  border-radius: 2px;
+  .card-tip-title {
+    font-size: 22px;
+    font-weight: bold;
+  }
+}
+
+
+.bg-light-blue {
+  background-color: #deeffc;
+}
+
+.bg-light-green {
+  background-color: #d5e8e0;
+}
+
+.bg-semi-blue {
+  background-color: #b2eef7;
+}
+
+.bg-semi-green {
+  background-color: #b1efe8;
+}
+
+
+a.spreadsheet-link {
+  color: #1382ad;
+  white-space: wrap;
+  &:hover {
+    color: #1382ad;
+    opacity: 0.6;
+  }
+}

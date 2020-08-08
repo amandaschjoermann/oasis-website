@@ -1,0 +1,30 @@
+// Graphical variables
+@import "config/fonts";
+@import "config/colors";
+@import "config/bootstrap_variables";
+
+// External libraries
+@import "bootstrap/scss/bootstrap";
+// @import "font-awesome-sprockets";
+// @import "font-awesome";
+
+// Your CSS partials
+@import "components/index";
+@import "pages/index";
+
+body {
+  background-size: cover;
+  background-position: center;
+  background-image: asset-url("light-bg.png");
+  min-height: 100vh;
+  padding-bottom: 100px;
+}
+
+a {
+  color: rgba(30,30,30,1);
+  transition: 0.05s ease;
+  &:hover {
+    color: rgba(130,130,130,1);
+    text-decoration: none;
+  }
+}

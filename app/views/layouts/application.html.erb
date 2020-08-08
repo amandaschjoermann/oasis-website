@@ -1,15 +1,47 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>OasisWebsite</title>
+    <title>ACNH The Oasis</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <%= favicon_link_tag 'https://emojis.wiki/emoji-pics/messenger/palm-tree-messenger.png' %>
   </head>
 
   <body>
+    <div class="oasis-navbar py-3 px-4 d-flex justify-content-end justify-content-md-between sticky-top bg-white align-items-center shadow-sm">
+      <div class="d-none d-md-block">
+        <div class="server-icon">
+          <%= link_to root_path do %>
+            <%= image_tag "https://cdn.discordapp.com/emojis/737328744309719142.png?v=1", alt: "alttext" %>
+          <% end %>
+        </div>
+      </div>
+      <div class="d-flex">
+        <div class="px-3">
+          <%= link_to category_path(Category.all.first) do %>
+            Channel guides
+            <%= image_tag "leaf-brown.png", alt: "alttext", height: 20 %>
+          <% end %>
+        </div>
+        <div class="px-3">
+          <%= link_to spreadsheets_path do %>
+            Useful links
+            <%= image_tag "leaf-blue.png", alt: "alttext", height: 20 %>
+          <% end %>
+        </div>
+        <div class="px-3">
+          <%= link_to tips_path do %>
+            Good to know
+            <%= image_tag "leaf-green.png", alt: "alttext", height: 20 %>
+          <% end %>
+        </div>
+      </div>
+    </div>
     <%= yield %>
   </body>
 </html>

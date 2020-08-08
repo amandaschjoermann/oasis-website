@@ -1,0 +1,31 @@
+<div class="container home-wrapper">
+  <div class="d-flex flex-column align-items-center justify-content-center mb-5">
+    <h1 class="oasis-header text-center">Browse through all channels here</h1>
+    <p>Tips, tricks, which bots to use and much more</p>
+  </div>
+
+  <div class="row">
+    <% @categories.each do |category| %>
+      <div class="col-6 col-md-3 mb-2">
+        <%= link_to category_path(category) do %>
+          <div class="pill-category bg-white p-2 px-3 mx-2 shadow-sm">
+            <div class="title"><%= category.name %></div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="card-category my-5">
+    <h3><%= @category.name %></h3>
+    <div><%= @category.description %></div>
+  </div>
+
+  <% @category.channels.each do |channel| %>
+    <div class="card-channel mb-3 bg-white p-4 shadow-sm">
+      <div class="font-weight-bold mb-2"><%= channel.name %></div>
+      <div><%= channel.description %></div>
+    </div>
+  <% end %>
+
+</div>

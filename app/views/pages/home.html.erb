@@ -1,0 +1,37 @@
+<div class="container home-wrapper">
+  <div class="d-flex flex-column align-items-center justify-content-center mb-5">
+    <h1 class="oasis-header text-center">Welcome to ACNH The Oasis guiding website</h1>
+    <p>You made it, let's get started!</p>
+  </div>
+
+  <div class="row text-center">
+    <div class="col-sm-12 col-md-4 mb-5">
+      <%= link_to category_path(Category.all.first), class: "link" do %>
+        <div class="card-oasis border-brown shadow-sm" style="background-image: url('https://acpocketnews.com/wp-content/uploads/2020/03/Timmy-and-Tommy-Desktop-Wallpaper.png');">
+          <div class="title bg-white p-2 px-3 shadow">Channel guides</div>
+        </div>
+      <% end %>
+      <p class="mt-3">How and what channels to use</p>
+    </div>
+
+    <div class="col-sm-12 col-md-4 mb-5">
+      <%= link_to spreadsheets_path, class: "link" do %>
+          <div class="card-oasis border-blue shadow-sm" style="background-image: url('https://acpocketnews.com/wp-content/uploads/2020/03/KK-Desktop-Wallpaper.png');">
+            <div class="title bg-white p-2 px-3 shadow">Useful links</div>
+          </div>
+      <% end %>
+      <p class="mt-3">Links to resources and spreadsheets</p>
+    </div>
+
+    <div class="col-sm-12 col-md-4 mb-5">
+      <%= link_to tips_path, class: "link" do %>
+        <div class="card-oasis border-green shadow-sm" style="background-image: url('https://acpocketnews.com/wp-content/uploads/2020/03/Tom-Nook-Desktop-Wallpaper.png');">
+          <div class="title bg-white p-2 px-3 shadow">Good to know</div>
+        </div>
+      <% end %>
+      <p class="mt-3">Things to know before you get started</p>
+    </div>
+
+  </div>
+</div>
+
