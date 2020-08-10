@@ -36,8 +36,8 @@
           <% end %>
         </div>
         <div class="px-3">
-          <%= link_to spreadsheets_path do %>
-            Useful links
+          <%= link_to bot_path(Bot.all.first) do %>
+            Bot guides
             <%= image_tag "leaf-blue.png", alt: "alttext", height: 20 %>
           <% end %>
         </div>
@@ -50,10 +50,10 @@
                 <%= image_tag "https://discordapp.com/assets/794df59352a0aab153763ae7c1a4b67c.svg", alt: "alttext", height: 15 %>
               </div>
             <% end %>
-            <%= link_to bot_path(Bot.all.first) do %>
+            <%= link_to spreadsheets_path do %>
               <div class="p-3 d-flex align-items-center justify-content-end green-border-bottom">
-                <div class="mr-3">Server Bots</div>
-                <%= image_tag "https://cdn.discordapp.com/emojis/230105988211015680.png?v=1", alt: "alttext", height: 20 %>
+                <div class="mr-3">Resources</div>
+                <%= image_tag "https://discordapp.com/assets/7c13aa0def6ccb6932f47dedd33f59c1.svg", alt: "alttext", height: 15 %>
               </div>
             <% end %>
           </div>
