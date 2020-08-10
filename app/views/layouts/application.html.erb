@@ -10,9 +10,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <%= favicon_link_tag 'https://emojis.wiki/emoji-pics/messenger/palm-tree-messenger.png' %>
+    <script src="https://kit.fontawesome.com/418704681c.js" crossorigin="anonymous"></script>
   </head>
 
-  <body>
+  <body class="preload">
     <div class="oasis-navbar py-3 px-4 d-flex justify-content-end justify-content-md-between sticky-top bg-white align-items-center shadow-sm">
       <div class="d-none d-md-block">
         <div class="server-icon">
@@ -29,19 +30,40 @@
           <% end %>
         </div>
         <div class="px-3">
-          <%= link_to spreadsheets_path do %>
-            Useful links
-            <%= image_tag "leaf-blue.png", alt: "alttext", height: 20 %>
-          <% end %>
-        </div>
-        <div class="px-3">
           <%= link_to tips_path do %>
             Good to know
             <%= image_tag "leaf-green.png", alt: "alttext", height: 20 %>
           <% end %>
         </div>
+        <div class="px-3">
+          <%= link_to spreadsheets_path do %>
+            Useful links
+            <%= image_tag "leaf-blue.png", alt: "alttext", height: 20 %>
+          <% end %>
+        </div>
+        <div class="px-3 drop-trigger">
+          <i class="fas fa-bars"></i>
+          <div class="drop-content bg-white shadow-sm">
+            <%= link_to rules_path do %>
+              <div class="p-3 d-flex align-items-center justify-content-end green-border-bottom">
+                <div class="mr-3">Rules</div>
+                <%= image_tag "https://discordapp.com/assets/794df59352a0aab153763ae7c1a4b67c.svg", alt: "alttext", height: 15 %>
+              </div>
+            <% end %>
+            <%= link_to "#" do %>
+              <div class="p-3 d-flex align-items-center justify-content-end green-border-bottom">
+                <div class="mr-3">Meet the Team</div>
+                <%= image_tag "https://discordapp.com/assets/e37c985edda06b7d5f4559bc838c1bde.svg", alt: "alttext", height: 15 %>
+              </div>
+            <% end %>
+          </div>
+        </div>
       </div>
     </div>
     <%= yield %>
+    <div class="d-flex align-items-center discord-link">
+      <i class="fab fa-discord mr-2"></i>
+      <%= link_to "https://discord.gg/acnhoasis", "https://discord.gg/acnhoasis", target: "_blank" %>
+    </div>
   </body>
 </html>

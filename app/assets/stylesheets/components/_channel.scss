@@ -47,3 +47,17 @@ a.spreadsheet-link {
     opacity: 0.6;
   }
 }
+
+.blue-border-rules {
+  border: 2px solid #3C87C3;
+  border-radius: 2px;
+}
+
+.bot-info {
+  border: 1px solid #d5e8e0;
+  border-radius: 25px;
+  i {
+    font-size: 8px;
+    color: #00d6a1;
+  }
+}

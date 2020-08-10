@@ -17,7 +17,8 @@ body {
   background-position: center;
   background-image: asset-url("light-bg.png");
   min-height: 100vh;
-  padding-bottom: 100px;
+  position: relative;
+  background-attachment: fixed;
 }
 
 a {
@@ -27,4 +28,11 @@ a {
     color: rgba(130,130,130,1);
     text-decoration: none;
   }
+}
+
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
 }

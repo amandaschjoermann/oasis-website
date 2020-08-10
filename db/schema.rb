@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 2020_08_08_142506) do
 
   create_table "bots", force: :cascade do |t|
     t.string "name"
+    t.string "avatar"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -33,6 +34,7 @@ ActiveRecord::Schema.define(version: 2020_08_08_142506) do
   create_table "categories", force: :cascade do |t|
     t.string "name"
     t.string "description"
+    t.string "icon"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

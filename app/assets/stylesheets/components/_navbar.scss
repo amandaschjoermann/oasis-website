@@ -10,3 +10,30 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.discord-link {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 12px;
+  color: rgba(150,150,150,1);
+}
+
+.fas.fa-bars {
+  position: relative;
+  cursor: pointer;
+}
+
+.drop-content {
+  position: absolute;
+  right: 0px;
+  top: 87px;
+  width: 200px;
+  border-top: 2px solid #d5e8e0;
+  display: none;
+  user-select: none;
+}
+
+.green-border-bottom {
+  border-bottom: 1px solid #d5e8e0;
+}
