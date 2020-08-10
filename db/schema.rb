@@ -27,6 +27,12 @@ ActiveRecord::Schema.define(version: 2020_08_08_142506) do
   create_table "bots", force: :cascade do |t|
     t.string "name"
     t.string "avatar"
+    t.string "intro"
+    t.string "host"
+    t.string "queue"
+    t.string "template"
+    t.string "commands"
+    t.string "example"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

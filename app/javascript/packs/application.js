@@ -21,3 +21,12 @@ function navbarDropdown() {
 }
 
 navbarDropdown();
+
+
+function copyToClipboard(element) {
+  var $temp = $(".bot-template");
+  $("body").append($temp);
+  $temp.val($(element).text()).select();
+  document.execCommand("copy");
+  $temp.remove();
+}

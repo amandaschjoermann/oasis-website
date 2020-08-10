@@ -56,8 +56,23 @@ a.spreadsheet-link {
 .bot-info {
   border: 1px solid #d5e8e0;
   border-radius: 25px;
+  white-space: nowrap;
   i {
     font-size: 8px;
     color: #00d6a1;
   }
+}
+
+.bot-title {
+  white-space: nowrap;
+}
+
+.command {
+  background-color: #d5e8e0;
+  padding: 2px;
+}
+
+.bot-template {
+  background-color: #d5e8e0;
+  width: fit-content;
 }

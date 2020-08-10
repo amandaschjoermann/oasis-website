@@ -100,7 +100,17 @@ puts "Done creating spreadsheets"
 
 puts "Creating bots"
 
-redd = Bot.create!(name: "Redd", avatar: "https://cdn.discordapp.com/attachments/726075201397325854/727888659033882705/Bot_Redd_HeadOnly_Transparent.png")
+redd = Bot.create!(
+  name: "Redd",
+  avatar: "https://cdn.discordapp.com/attachments/726075201397325854/727888659033882705/Bot_Redd_HeadOnly_Transparent.png",
+  intro: "An art bot made to make hosting your Redd visits and art giveaways easy and safe!",
+  host: "🦊 Use <span class='command'>i!new</span> followed by the template below to create a new post. <br> 🦊 Use <span class='command'>i!queue dodo_code</span>, where dodo_code is your dodo code, Redd will DM that to the buyers when they join the queue. Use the same command again to update your dodo code, Redd will once again DM the new dodo code to everyone in queue. <br> 🦊 Use <span class='command'>i!delete</span> when you’re done hosting to delete your post.",
+  queue: "🦊 To join a queue simply tap the emoji number on the post 1️⃣, 2️⃣, 3️⃣ or 4️⃣ to claim the art piece responding to that number. If you were fast enough to get it, Redd will DM you the dodo code and you’re good to go. <br> 🦊 When you’ve bought or collected your piece of art, use the command <span class='command'>I!buy</span> to update the queue and mark your claimed art piece as bought. No need to do more than that!",
+  template: "i!new <br> Redd Alert!!! <br> Shops: <br> Water: <br> Other: <br> Items: <br> 1. *name_of_art_piece* (real/fake) <br> 2. *name_of_art_piece* (real/fake) <br> 3. *name_of_art_piece* (real/fake) <br> 4. *name_of_art_piece* (real/fake)",
+  example: "i!new <br> Redd is here, wooo!!! <br> Shops: Sure, limited items as well <br> Water: No thanks, all golden <br> Other: I'll be afk, ping me if there's any issues <br> Items: <br> 1. Valiant statue (real) <br> 2. Motherly statue (fake) <br> 3. Calm painting (real)",
+  commands: "<span class='command'>i!template</span> <br> Will send you a template to copy paste and fill in. Easy peasy! <br><br> <span class='command'>i!remove @mention </span> <br> The host can use this command if someone doesn't show up <br><br> <span class='command'>i!art</span> <br> Will send you a complete list of the art in the game, also a guide to know if your art is real or fake."
+)
+
 clippy = Bot.create!(name: "Clippy", avatar: "https://cdn.discordapp.com/attachments/709008918575185961/730798938264829962/Clippy.png")
 moistmaker = Bot.create!(name: "Moistmaker", avatar: "https://cdn.discordapp.com/emojis/737328744309719142.png?v=1")
 tom = Bot.create!(name: "Tom Nook", avatar: "https://cdn.discordapp.com/attachments/727264651162681505/728199016306835476/Bot_Tom_Head_Transparent.png")
@@ -139,3 +149,6 @@ BotChannel.create!(bot: moistmaker, channel: water)
 BotChannel.create!(bot: pascal, channel: thank)
 
 puts "Done linking bots to channels"
+
+
+
