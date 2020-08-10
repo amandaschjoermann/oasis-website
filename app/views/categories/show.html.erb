@@ -25,13 +25,13 @@
         <h3 class="font-weight-bold"><%= @category.name %> <span class="ml-2"><%= @category.icon %></span></h3>
         <div><%= @category.description %></div>
       </div>
-
-      <div>search bar</div>
     </div>
 
     <div id="channels-list">
       <!-- working searchbar -->
-      <input class="search">
+      <div class="d-flex justify-content-center mb-5">
+        <input class="search p-3 w-50" placeholder="Find the channel you're looking for">
+      </div>
       <ul class="list-unstyled list">
         <% @channels.each do |channel| %>
           <li>

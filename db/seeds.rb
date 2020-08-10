@@ -111,11 +111,11 @@ redd = Bot.create!(
   commands: "<span class='command'>i!template</span> <br> Will send you a template to copy paste and fill in. Easy peasy! <br><br> <span class='command'>i!remove @mention </span> <br> The host can use this command if someone doesn't show up <br><br> <span class='command'>i!art</span> <br> Will send you a complete list of the art in the game, also a guide to know if your art is real or fake."
 )
 
-clippy = Bot.create!(name: "Clippy", avatar: "https://cdn.discordapp.com/attachments/709008918575185961/730798938264829962/Clippy.png")
-moistmaker = Bot.create!(name: "Moistmaker", avatar: "https://cdn.discordapp.com/emojis/737328744309719142.png?v=1")
-tom = Bot.create!(name: "Tom Nook", avatar: "https://cdn.discordapp.com/attachments/727264651162681505/728199016306835476/Bot_Tom_Head_Transparent.png")
-nooklings = Bot.create!(name: "Timmy and Tommy", avatar: "https://cdn.discordapp.com/attachments/727264651162681505/728199007482150962/Bot_Nooklings_Head_Transparent.png")
-pascal = Bot.create!(name: "Pascal", avatar: "https://cdn.discordapp.com/attachments/726075201397325854/731557960282537984/Bot_Pascal_Head_Transparent.png")
+clippy = Bot.create!(name: "Clippy", avatar: "https://cdn.discordapp.com/attachments/709008918575185961/730798938264829962/Clippy.png", intro: "", host: "", queue: "", template: "", example: "", commands: "")
+moistmaker = Bot.create!(name: "Moistmaker", avatar: "https://cdn.discordapp.com/emojis/737328744309719142.png?v=1", intro: "", host: "", queue: "", template: "", example: "", commands: "")
+tom = Bot.create!(name: "Tom Nook", avatar: "https://cdn.discordapp.com/attachments/727264651162681505/728199016306835476/Bot_Tom_Head_Transparent.png", intro: "", host: "", queue: "", template: "", example: "", commands: "")
+nooklings = Bot.create!(name: "Timmy and Tommy", avatar: "https://cdn.discordapp.com/attachments/727264651162681505/728199007482150962/Bot_Nooklings_Head_Transparent.png", intro: "", host: "", queue: "", template: "", example: "", commands: "")
+pascal = Bot.create!(name: "Pascal", avatar: "https://cdn.discordapp.com/attachments/726075201397325854/731557960282537984/Bot_Pascal_Head_Transparent.png", intro: "", host: "", queue: "", template: "", example: "", commands: "")
 
 puts "Done creating bots"
 
