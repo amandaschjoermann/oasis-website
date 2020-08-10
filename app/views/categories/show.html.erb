@@ -29,24 +29,29 @@
       <div>search bar</div>
     </div>
 
-
-    <% @channels.each do |channel| %>
-      <div class="card-channel mb-3 bg-white p-4 shadow-sm">
-        <div class="d-flex align-items-center mb-3">
-          <div class="font-weight-bold"><%= channel.name %></div>
-          <% channel.bots.each do |bot| %>
-            <%= link_to bot_path(bot) do  %>
-              <div class="d-flex align-items-center bot-info ml-5 px-3 shadow-sm py-1">
-                <i class="fas fa-circle"></i>
-                <div class="mx-2"><%= bot.name %></div>
-                <%= image_tag bot.avatar, alt: "alttext", height: 25 %>
+    <div id="channels-list">
+      <!-- working searchbar -->
+      <input class="search">
+      <ul class="list-unstyled list">
+        <% @channels.each do |channel| %>
+          <li>
+            <div class="card-channel mb-3 bg-white p-4 shadow-sm">
+              <div class="d-flex align-items-center mb-3">
+                <div class="font-weight-bold channel-name"><%= channel.name %></div>
+                <% channel.bots.each do |bot| %>
+                  <%= link_to "#" do  %>
+                    <div class="d-flex align-items-center bot-info ml-5 px-3 shadow-sm py-1">
+                      <i class="fas fa-circle"></i>
+                      <div class="mx-2"><%= bot.name %></div>
+                      <%= image_tag bot.avatar, alt: "alttext", height: 25 %>
+                    </div>
+                  <% end %>
+                <% end %>
               </div>
-            <% end %>
-          <% end %>
-        </div>
-        <div><%= channel.description.html_safe %></div>
-      </div>
-    <% end %>
+              <div class="channel-description"><%= channel.description.html_safe %></div>
+            </div>
+          </li>
+        <% end %>
   <% else %>
     <div class="card-category my-5">
       <h3 class="font-weight-bold"><%= @category.name %> <span class="ml-2"><%= @category.icon %></span></h3>
@@ -54,21 +59,31 @@
     </div>
 
     <% @category.channels.each do |channel| %>
-      <div class="card-channel mb-3 bg-white p-4 shadow-sm">
-        <div class="d-flex align-items-center mb-3">
-          <div class="font-weight-bold"><%= channel.name %></div>
-          <% channel.bots.each do |bot| %>
-            <%= link_to bot_path(bot) do  %>
-              <div class="d-flex align-items-center bot-info ml-5 px-3 shadow-sm py-1">
-                <i class="fas fa-circle"></i>
-                <div class="mx-2"><%= bot.name %></div>
-                <%= image_tag bot.avatar, alt: "alttext", height: 25 %>
-              </div>
+      <li>
+        <div class="card-channel mb-3 bg-white p-4 shadow-sm">
+          <div class="d-flex align-items-center mb-3">
+            <div class="font-weight-bold channel-name"><%= channel.name %></div>
+            <% channel.bots.each do |bot| %>
+              <%= link_to "#" do  %>
+                <div class="d-flex align-items-center bot-info ml-5 px-3 shadow-sm py-1">
+                  <i class="fas fa-circle"></i>
+                  <div class="mx-2"><%= bot.name %></div>
+                  <%= image_tag bot.avatar, alt: "alttext", height: 25 %>
+                </div>
+              <% end %>
             <% end %>
-          <% end %>
+          </div>
+          <div class="channel-description"><%= channel.description.html_safe %></div>
         </div>
-        <div><%= channel.description.html_safe %></div>
-      </div>
+      </li>
     <% end %>
+  </ul>
+  </div> <!-- closing #channels-list -->
   <% end %>
+</div> <!-- closing container -->
+
+<div id="hacker-list">
+    <ul class="list"></ul>
 </div>
+
+<%= javascript_pack_tag "channel-search" %>
