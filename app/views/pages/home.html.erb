@@ -8,7 +8,11 @@
     <div class="col-sm-12 col-md-4 mb-5">
       <%= link_to category_path(Category.all.first), class: "link" do %>
         <div class="card-oasis border-brown shadow-sm" style="background-image: url('https://acpocketnews.com/wp-content/uploads/2020/03/Timmy-and-Tommy-Desktop-Wallpaper.png');">
-          <div class="title bg-white p-2 px-3 shadow">Channel guides</div>
+          <div class="d-flex align-items-center bg-white p-2 px-3 shadow">
+            <div class="title d-flex align-items-center">Channel guides</div>
+            <i class="fas fa-map-signs brown-icon ml-3"></i>
+          </div>
+
         </div>
       <% end %>
       <p class="mt-3">How and what channels to use</p>
@@ -18,7 +22,11 @@
     <div class="col-sm-12 col-md-4 mb-5">
       <%= link_to tips_path, class: "link" do %>
         <div class="card-oasis border-green shadow-sm" style="background-image: url('https://acpocketnews.com/wp-content/uploads/2020/03/Tom-Nook-Desktop-Wallpaper.png');">
-          <div class="title bg-white p-2 px-3 shadow">Good to know</div>
+          <div class="d-flex align-items-center bg-white p-2 px-3 shadow">
+            <div class="title">Good to know</div>
+            <i class="far fa-life-ring green-icon ml-3"></i>
+          </div>
+
         </div>
       <% end %>
       <p class="mt-3">Things to know before you get started</p>
@@ -27,7 +35,10 @@
     <div class="col-sm-12 col-md-4 mb-5">
       <%= link_to bot_path(Bot.all.first), class: "link" do %>
           <div class="card-oasis border-blue shadow-sm" style="background-image: url('https://acpocketnews.com/wp-content/uploads/2020/03/KK-Desktop-Wallpaper.png');">
-            <div class="title bg-white p-2 px-3 shadow">Bot Guides</div>
+            <div class="d-flex align-items-center bg-white p-2 px-3 shadow">
+              <div class="title">Bot Guides</div>
+              <i class="fas fa-code-branch blue-icon ml-3"></i>
+            </div>
           </div>
       <% end %>
       <p class="mt-3">How and where to use the different bots</p>
