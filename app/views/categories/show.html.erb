@@ -39,7 +39,7 @@
               <div class="d-flex align-items-center mb-3">
                 <div class="font-weight-bold channel-name"><%= channel.name %></div>
                 <% channel.bots.each do |bot| %>
-                  <%= link_to "#" do  %>
+                  <%= link_to bot_path(bot) do  %>
                     <div class="d-flex align-items-center bot-info ml-5 px-3 shadow-sm py-1">
                       <i class="fas fa-circle"></i>
                       <div class="mx-2"><%= bot.name %></div>
@@ -63,7 +63,7 @@
           <div class="d-flex align-items-center mb-3">
             <div class="font-weight-bold channel-name"><%= channel.name %></div>
             <% channel.bots.each do |bot| %>
-              <%= link_to "#" do  %>
+              <%= link_to bot_path(bot) do  %>
                 <div class="d-flex align-items-center bot-info ml-5 px-3 shadow-sm py-1">
                   <i class="fas fa-circle"></i>
                   <div class="mx-2"><%= bot.name %></div>
