@@ -1,5 +1,11 @@
 import 'bootstrap';
 
+
+require("@rails/ujs").start()
+// require("turbolinks").start()
+// require("@rails/activestorage").start()
+// require("channels")
+
 $(window).on('load', function() {
   $("body").removeClass("preload");
 });
@@ -21,12 +27,3 @@ function navbarDropdown() {
 }
 
 navbarDropdown();
-
-
-function copyToClipboard(element) {
-  var $temp = $(".bot-template");
-  $("body").append($temp);
-  $temp.val($(element).text()).select();
-  document.execCommand("copy");
-  $temp.remove();
-}
