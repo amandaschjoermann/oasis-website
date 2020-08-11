@@ -26,7 +26,11 @@ class User < ApplicationRecord
         user.discord_name = member.dig('user', 'username')
         user.password = Devise.friendly_token[0, 20]
         user.oasis_name = member['nick']
-        email = user.discord_name.gsub(/\W/, '') + "-" + user.oasis_name.gsub(/\W/, '') + "@oasis.com"
+        if user.oasis_name
+          email = user.discord_name.gsub(/\W/, '') + "-" + user.oasis_name.gsub(/\W/, '') + "@oasis.com"
+        else
+          email = "youcantbehere-#{user.discord_name.gsub(/\W/, '')}@oasis.com"
+        end
         user.email = email
         avatar_url = "https://cdn.discordapp.com/avatars/#{auth.uid}/#{member.dig('user', 'avatar')}"
         user.image = avatar_url
