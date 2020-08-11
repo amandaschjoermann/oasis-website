@@ -12,6 +12,9 @@ class PagesController < ApplicationController
   def tips
   end
 
+  def test
+  end
+
   def rules
     @rules = [
       { icon: "https://discordapp.com/assets/68546f5fc3b2166f42cf90b7e23c5ae9.svg", title: "Respect all server members at all times. ", description: "This includes posts on public channels, DMs, and interacting with other players on an island. (Ask the host before doing something you are unsure of – Ex: picking flowers, exploring the island, shopping, etc…)" },

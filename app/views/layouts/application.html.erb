@@ -14,8 +14,8 @@
   </head>
 
   <body class="preload">
-    <div class="oasis-navbar py-3 px-4 d-flex justify-content-end justify-content-md-between sticky-top bg-white align-items-center shadow-sm">
-      <div class="d-none d-md-block">
+    <div class="oasis-navbar py-3 px-4 d-flex justify-content-between sticky-top bg-white align-items-center shadow-sm">
+      <div>
         <div class="server-icon">
           <%= link_to root_path do %>
             <%= image_tag "https://cdn.discordapp.com/emojis/737328744309719142.png?v=1", alt: "alttext" %>
@@ -23,7 +23,7 @@
         </div>
       </div>
       <div class="d-flex">
-        <div class="px-3">
+        <div class="px-3 d-none d-md-block">
           <%= link_to category_path(Category.all.first) do %>
             <div class="d-flex align-items-center">
               Channel guides
@@ -31,7 +31,7 @@
             </div>
           <% end %>
         </div>
-        <div class="px-3">
+        <div class="px-3 d-none d-md-block">
           <%= link_to tips_path do %>
             <div class="d-flex align-items-center">
               Good to know
@@ -39,7 +39,7 @@
             </div>
           <% end %>
         </div>
-        <div class="px-3">
+        <div class="px-3 d-none d-md-block">
           <%= link_to bot_path(Bot.all.first) do %>
             <div class="d-flex align-items-center">
               Bot guides
@@ -50,6 +50,34 @@
         <div class="px-3 drop-trigger">
           <i class="fas fa-bars"></i>
           <div class="drop-content bg-white shadow-sm">
+
+            <div class="d-block d-md-none">
+              <%= link_to category_path(Category.all.first) do %>
+                <div class="p-3 d-flex align-items-center justify-content-end green-border-bottom">
+                  <div class="mr-3">Channel guides</div>
+                  <i class="fas fa-map-signs brown-icon"></i>
+                </div>
+              <% end %>
+            </div>
+
+            <div class="d-block d-md-none">
+              <%= link_to tips_path do %>
+                <div class="p-3 d-flex align-items-center justify-content-end green-border-bottom">
+                  <div class="mr-3">Good to know</div>
+                  <i class="far fa-life-ring green-icon"></i>
+                </div>
+              <% end %>
+            </div>
+
+            <div class="d-block d-md-none">
+              <%= link_to bot_path(Bot.all.first) do %>
+                <div class="p-3 d-flex align-items-center justify-content-end green-border-bottom">
+                  <div class="mr-3">Bot guides</div>
+                  <i class="fas fa-code-branch blue-icon"></i>
+                </div>
+              <% end %>
+            </div>
+
             <%= link_to rules_path do %>
               <div class="p-3 d-flex align-items-center justify-content-end green-border-bottom">
                 <div class="mr-3">Rules</div>

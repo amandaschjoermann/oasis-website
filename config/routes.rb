@@ -4,8 +4,10 @@ Rails.application.routes.draw do
 
   get 'tips', to: 'pages#tips'
   get 'rules', to: 'pages#rules'
+  get 'test', to: 'pages#test'
   get 'login', to: 'pages#login'
   get 'not-member', to: 'pages#no_member_zone', as: :no_member_zone
+
 
   resources :channels, only: [:index]
   resources :categories, only: [:show]
