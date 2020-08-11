@@ -29,8 +29,7 @@ gem 'simple_form'
 gem 'devise'
 gem 'omniauth-discord'
 gem 'dotenv-rails'
-gem 'rbnacl-libsodium'
-gem 'discordrb'
+gem 'httparty'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false

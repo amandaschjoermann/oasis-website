@@ -15,20 +15,23 @@ class User < ApplicationRecord
 
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
-      bot = Discordrb::Bot.new token: ENV['BOT_TOKEN']
-      oasis = bot.server(ENV['OASIS_ID'])
-      member = oasis.member(auth.uid)
-      if member
-        user.oasis_name = member.display_name
-        user.roles = member.roles.map(&:name).join("-|-")
-        user.mod = user.roles.include? "Mod Team"
-        user.oasis_member = user.roles.include? "Travellers"
+      base_api = base_api = "https://discord.com/api"
+      member = HTTParty.get(base_api + "/guilds/#{ENV['OASIS_ID']}/members/#{auth.uid}", headers: {"Authorization" => "Bot #{ENV['BOT_TOKEN']}"})
+      is_oasis_member = member['roles'].include?(ENV['TRAVELLER_ROLE_ID'])
+      is_mod = member['roles'].include?(ENV['MOD_ROLE_ID'])
+      if member['message'] == "Unknown User"
+        return nil
+      else
+        id = User.last ? User.last.id + 1 : 1
+        user.email = "oasis-user-#{id}@oasis.com"
+        user.password = Devise.friendly_token[0, 20]
+        user.oasis_name = member['nick']
+        user.discord_name = member.dig('user', 'username')
+        avatar_url = "https://cdn.discordapp.com/avatars/#{auth.uid}/#{member.dig('user', 'avatar')}"
+        user.image = avatar_url
+        user.mod = is_mod
+        user.oasis_member = is_oasis_member
       end
-      id = User.last ? User.last.id + 1 : 1
-      user.email = "oasis-user-#{id}@oasis.com"
-      user.password = Devise.friendly_token[0, 20]
-      user.discord_name = auth.info.name   # assuming the user model has a name
-      user.image = auth.info.image # assuming the user model has an image
       # If you are using confirmable and the provider(s) you use validate emails,
       # uncomment the line below to skip the confirmation emails.
       # user.skip_confirmation!
