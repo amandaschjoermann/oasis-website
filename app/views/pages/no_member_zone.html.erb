@@ -1,1 +1,18 @@
-<h1>You need to be a member of ACNH The Oasis Discord server to access this website. <%= link_to "Join here", "http://discord.gg/acnhoasis" %></h1>
+<div class="container home-wrapper d-flex align-items-center justify-content-center">
+  <div class="d-flex flex-column align-items-center justify-content-center mb-5 login-info bg-white shadow-sm p-5">
+    <h1 class="oasis-header mb-3">Oops!</h1>
+    <div class="text-center mb-5">You need to be a member of ACNH The Oasis Discord server to access this</div>
+    <%= link_to "http://discord.gg/acnhoasis", target: "_blank", class: "login-button p-3 px-5 shadow-sm" do %>
+      <div class="d-flex align-items-center">
+        <i class="fab fa-discord mr-3"></i>
+        <div>Join is here</div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<%= render 'shared/island' %>
+
+
+
+

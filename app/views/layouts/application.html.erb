@@ -13,7 +13,7 @@
   </head>
 
   <body class="preload">
-    <div class="oasis-navbar py-3 px-4 d-flex justify-content-between sticky-top bg-white align-items-center shadow-sm">
+    <div class="oasis-navbar py-2 px-4 d-flex justify-content-between sticky-top bg-white align-items-center shadow-sm">
       <div>
         <div class="server-icon">
           <%= link_to root_path do %>
@@ -21,7 +21,7 @@
           <% end %>
         </div>
       </div>
-      <div class="d-flex">
+      <div class="d-flex align-items-center">
         <div class="px-3 d-none d-md-block">
           <%= link_to category_path(Category.all.first) do %>
             <div class="d-flex align-items-center">
@@ -97,6 +97,9 @@
               </div>
             <% end %>
           </div>
+        </div>
+        <div>
+          <%= image_tag current_user.image, alt: "alttext", height: 40, class: "rounded-circle ml-3" %>
         </div>
       </div>
     </div>

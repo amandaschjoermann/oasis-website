@@ -87,11 +87,14 @@ a {
 }
 
 @keyframes bounce-two {
-  from {
+  0% {
     transform: translateY(0px);
   }
-  to {
+  50% {
     transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(0px);
   }
 }
 @-webkit-keyframes bounce-two {
