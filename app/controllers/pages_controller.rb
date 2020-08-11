@@ -1,5 +1,12 @@
 class PagesController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:no_member_zone]
   def home
+  end
+
+  def login
+  end
+
+  def no_member_zone
   end
 
   def tips
