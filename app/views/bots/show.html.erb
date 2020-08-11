@@ -30,10 +30,12 @@
       <div class="row">
         <% @bot.channels.each do |channel| %>
           <div class="col">
-            <div class="d-flex align-items-center bot-info px-3 shadow-sm py-1 mb-3">
-              <i class="fas fa-circle"></i>
-              <div class="mx-2"><%= channel.name %></div>
-            </div>
+            <%= link_to category_path(channel.category) do %>
+              <div class="d-flex align-items-center bot-info px-3 shadow-sm py-1 mb-3">
+                <i class="fas fa-circle"></i>
+                <div class="mx-2"><%= channel.name %></div>
+              </div>
+            <% end %>
           </div>
         <% end %>
       </div>
@@ -48,14 +50,14 @@
 
     <div class="row">
       <div class="col-12 col-md-5">
-        <div class="font-weight-bold ml-5 mb-3">Template</div>
-        <div class="bot-template ml-5 mb-5 p-5">
+        <div class="font-weight-bold ml-0 ml-md-5 mb-3">Template</div>
+        <div class="bot-template bot-example ml-0 ml-md-5 mb-5 p-5">
           <%= @bot.template.html_safe %>
         </div>
       </div>
       <div class="col-12 col-md-5">
-        <div class="font-weight-bold ml-5 mb-3">Example</div>
-        <div class="ml-5 mb-5 p-5">
+        <div class="font-weight-bold ml-0 ml-md-5 mb-3">Example</div>
+        <div class="bot-example ml-0 ml-md-5 mb-5 p-5">
           <%= @bot.example.html_safe %>
         </div>
       </div>

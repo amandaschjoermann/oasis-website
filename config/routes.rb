@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   get 'tips', to: 'pages#tips'
   get 'rules', to: 'pages#rules'
+  get 'test', to: 'pages#test'
+
 
   resources :channels, only: [:index]
   resources :categories, only: [:show]
