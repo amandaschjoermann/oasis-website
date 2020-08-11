@@ -23,10 +23,11 @@ class User < ApplicationRecord
         return nil
       else
         id = User.last ? User.last.id + 1 : 1
-        user.email = "oasis-user-#{id}@oasis.com"
+        user.discord_name = member.dig('user', 'username')
         user.password = Devise.friendly_token[0, 20]
         user.oasis_name = member['nick']
-        user.discord_name = member.dig('user', 'username')
+        email = user.discord_name.gsub(/\W/, '') + "-" + user.oasis_name.gsub(/\W/, '') + "@oasis.com"
+        user.email = email
         avatar_url = "https://cdn.discordapp.com/avatars/#{auth.uid}/#{member.dig('user', 'avatar')}"
         user.image = avatar_url
         user.mod = is_mod
