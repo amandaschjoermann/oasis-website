@@ -1,1 +1,13 @@
-<%= link_to "Log in with Discord", user_discord_omniauth_authorize_path, class: "btn btn-primary" %>
+<div class="container home-wrapper d-flex align-items-center justify-content-center">
+  <div class="d-flex flex-column align-items-center justify-content-center mb-5 login-info bg-white shadow-sm p-5">
+    <h1 class="oasis-header mb-3">Welcome!</h1>
+    <div class="text-center mb-5">Login with Discord to get access to the The Oasis guiding website</div>
+    <%= link_to user_discord_omniauth_authorize_path, class: "login-button p-3 px-5 shadow-sm" do %>
+      <div class="d-flex align-items-center">
+        <i class="fab fa-discord mr-3"></i>
+        <div>Login</div>
+      </div>
+    <% end %>
+  </div>
+</div>
+

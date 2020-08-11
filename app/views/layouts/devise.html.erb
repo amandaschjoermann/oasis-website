@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ACNH The Oasis</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <%= favicon_link_tag 'https://emojis.wiki/emoji-pics/messenger/palm-tree-messenger.png' %>
+    <script src="https://kit.fontawesome.com/418704681c.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body class="preload">
+
+    <div class="server-icon p-3 pl-5">
+      <%= link_to root_path do %>
+        <%= image_tag "logo.png", alt: "alttext" %>
+      <% end %>
+    </div>
+
+    <%= yield %>
+    <div class="d-flex align-items-center discord-link">
+      <i class="fab fa-discord mr-2"></i>
+      <%= link_to "https://discord.gg/acnhoasis", "https://discord.gg/acnhoasis", target: "_blank" %>
+    </div>
+  </body>
+</html>

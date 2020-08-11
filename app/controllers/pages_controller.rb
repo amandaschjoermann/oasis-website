@@ -4,6 +4,7 @@ class PagesController < ApplicationController
   end
 
   def login
+    render layout: "login"
   end
 
   def no_member_zone

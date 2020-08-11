@@ -6,7 +6,6 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <%= favicon_link_tag 'https://emojis.wiki/emoji-pics/messenger/palm-tree-messenger.png' %>
@@ -14,15 +13,15 @@
   </head>
 
   <body class="preload">
-    <div class="oasis-navbar py-3 px-4 d-flex justify-content-between sticky-top bg-white align-items-center shadow-sm">
+    <div class="oasis-navbar py-2 px-4 d-flex justify-content-between sticky-top bg-white align-items-center shadow-sm">
       <div>
         <div class="server-icon">
           <%= link_to root_path do %>
-            <%= image_tag "https://cdn.discordapp.com/emojis/737328744309719142.png?v=1", alt: "alttext" %>
+            <%= image_tag "logo.png", alt: "alttext" %>
           <% end %>
         </div>
       </div>
-      <div class="d-flex">
+      <div class="d-flex align-items-center">
         <div class="px-3 d-none d-md-block">
           <%= link_to category_path(Category.all.first) do %>
             <div class="d-flex align-items-center">
@@ -90,7 +89,17 @@
                 <%= image_tag "https://discordapp.com/assets/7c13aa0def6ccb6932f47dedd33f59c1.svg", alt: "alttext", height: 15 %>
               </div>
             <% end %>
+
+            <%= link_to destroy_user_session_path, method: :delete do %>
+              <div class="p-3 d-flex align-items-center justify-content-end green-border-bottom">
+                <div class="mr-3">Log out</div>
+                <i class="fas fa-door-closed grey-icon"></i>
+              </div>
+            <% end %>
           </div>
+        </div>
+        <div>
+          <%= image_tag current_user.image, alt: "alttext", height: 40, class: "rounded-circle ml-3" %>
         </div>
       </div>
     </div>
@@ -99,5 +108,6 @@
       <i class="fab fa-discord mr-2"></i>
       <%= link_to "https://discord.gg/acnhoasis", "https://discord.gg/acnhoasis", target: "_blank" %>
     </div>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </body>
 </html>

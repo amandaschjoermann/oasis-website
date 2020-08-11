@@ -5,7 +5,7 @@
   transition: 0.1s ease;
   cursor: pointer;
   &:hover {
-    transform: translate(0px, -1px)
+    transform: translate(0px, -1px);
   }
 }
 
@@ -85,6 +85,23 @@ a.spreadsheet-link {
 
 .search {
   font-size: 16px;
+}
+
+.login-info {
+  border: 2px solid #8bbaa5;
+  width: fit-content;
+}
+
+a.login-button {
+  background-color: #8ED0C9;
+  color: white;
+  transition: 0.1s ease;
+  border-radius: 2px;
+  &:hover {
+    background-color: #58c9bc;
+    transform: translate(0px, -1px);
+    color: white;
+  }
 }
 
 

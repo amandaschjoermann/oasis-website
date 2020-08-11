@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   get 'login', to: 'pages#login'
   get 'not-member', to: 'pages#no_member_zone', as: :no_member_zone
 
+  devise_scope :user do
+    get 'users/sign_out', to: 'devise/sessions#destroy'
+  end
 
   resources :channels, only: [:index]
   resources :categories, only: [:show]
