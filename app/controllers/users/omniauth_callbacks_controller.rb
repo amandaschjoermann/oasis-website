@@ -3,7 +3,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     auth = request.env["omniauth.auth"]
     @user = User.from_omniauth(auth)
 
-    if @user.oasis_member?
+    if @user && @user.oasis_member?
       sign_in_and_redirect @user, event: :authentication #this will throw if @user is not activated
       # set_flash_message(:notice, :success, kind: "Facebook") if is_navigational_format?
     else

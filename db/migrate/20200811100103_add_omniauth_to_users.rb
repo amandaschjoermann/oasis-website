@@ -5,7 +5,6 @@ class AddOmniauthToUsers < ActiveRecord::Migration[6.0]
     add_column :users, :image, :string
     add_column :users, :discord_name, :string
     add_column :users, :oasis_name, :string
-    add_column :users, :roles, :string
     add_column :users, :mod, :boolean
     add_column :users, :oasis_member, :boolean
   end
