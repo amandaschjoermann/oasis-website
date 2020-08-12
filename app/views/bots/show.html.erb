@@ -43,8 +43,9 @@
     </div>
 
     <h3 class="font-weight-bold text-center my-5">How to use <%= @bot.name %></h3>
+    <div class="mx-2 mx-md-5 mb-5">
 
-    <% if @bot.name == "Pascal" %>
+     <% if @bot.name == "Pascal" %>
       <div class="font-weight-bold">Instructions</div>
       <div class="mb-5">
         <div><%= @bot.name %> is really easy to use, just follow the template instructions below and you're good to go! Happy thanking 💚</div>
@@ -88,6 +89,7 @@
       <div class="font-weight-bold mt-5">Other useful commands</div>
       <%= @bot.commands.html_safe %>
     <% end %>
+   </div>
 
   </div>
 
