@@ -46,8 +46,16 @@
             </div>
           <% end %>
         </div>
+        <div class="px-3 d-none d-md-block">
+          <%= link_to rules_path do %>
+            <div class="d-flex align-items-center">
+              Server rules
+              <i class="far fa-bookmark grey-icon ml-3"></i>
+            </div>
+          <% end %>
+        </div>
         <div class="px-3 drop-trigger">
-          <i class="fas fa-bars"></i>
+          <%= image_tag current_user.image, alt: "alttext", height: 40, class: "rounded-circle fas fas-bars user-avatar" %>
           <div class="drop-content bg-white shadow-sm">
 
             <div class="d-block d-md-none">
@@ -77,12 +85,15 @@
               <% end %>
             </div>
 
-            <%= link_to rules_path do %>
-              <div class="p-3 d-flex align-items-center justify-content-end green-border-bottom">
-                <div class="mr-3">Rules</div>
-                <%= image_tag "https://discordapp.com/assets/794df59352a0aab153763ae7c1a4b67c.svg", alt: "alttext", height: 15 %>
-              </div>
-            <% end %>
+            <div class="d-block d-md-none">
+              <%= link_to rules_path do %>
+                <div class="p-3 d-flex align-items-center justify-content-end green-border-bottom">
+                  <div class="mr-3">Server rules</div>
+                  <i class="far fa-bookmark"></i>
+                </div>
+              <% end %>
+            </div>
+
             <%= link_to spreadsheets_path do %>
               <div class="p-3 d-flex align-items-center justify-content-end green-border-bottom">
                 <div class="mr-3">Resources</div>
@@ -99,7 +110,6 @@
           </div>
         </div>
         <div>
-          <%= image_tag current_user.image, alt: "alttext", height: 40, class: "rounded-circle ml-3" %>
         </div>
       </div>
     </div>
