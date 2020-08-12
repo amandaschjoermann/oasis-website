@@ -38,12 +38,12 @@ Channel.create!(name: "🐪 the-desert", description: "This is where you'll end 
 
 # ACNH general section
 Channel.create!(name: "🍃 acnh-chit-chat", description: "Discuss anything ACNH related here. Ask questions, help your buddies and get friends.", category: general)
-Channel.create!(name: "🔎 villager-hunt", description: "Going on an island hunt for villagers? Wanna spectate another member's hunt? This channel's for you! <br><br> 👀 Go to the #👥role-selection channel for the Spectators role if you want to be pinged whenever a hunt is going on <br> 👀 If you want people to keep you company during your hunt, just ping the Spectators!", category: general)
+Channel.create!(name: "🔎 villager-hunt", description: "Going on an island hunt for villagers? Wanna spectate another member's hunt? This channel's for you! <br><br> 👀 Go to the #👥role-selection channel for the Spectators role if you want to be pinged whenever a hunt is going on <br> 👀 If you want people to keep you company during your hunt, just ping the <span class='person'>@Spectators</span>", category: general)
 Channel.create!(name: "📸 island-exhibition", description: "If you're proud of something on your island, or even your whole island, and you want to show it to the world this is the place to do it! You can also use this channel to find inspiration and ask for opinions on your current work.", category: general)
 Channel.create!(name: "🎨 ables-corner", description: "The place to post your custom designs and get help to find the perfect pattern that you might be looking for! There's some real custom design wizards on our server so don't be shy to ask for help!", category: general)
 Channel.create!(name: "🧤 ask-a-gardener", description: "Breeding, cloning, all the different flower genotypes, layouts and so much more. It can be difficult to navigate in sometimes so this is the place to ask for help!", category: general)
 Channel.create!(name: "❔ in-game-help", description: "A channel to find helpful guides and infographics, you can search by tags. You're also free to ask any game related questions you might have!", category: general)
-Channel.create!(name: "💌 wishlists", description: "Post your wishlist here so people can help you find what you're looking for, and don't worry, people will help you out if you post in this channel! You may make a text wishlist, post an external wishlist site or share a Google Spreadsheets link to your wish list! It is up to you. <br><br> ♥️ Please remember to only post once to prevent confusion over which list is the most updated list! <br> ♥️ If you want to update your wishlist, please edit your previous post. <br> ♥️ Please use this format when posting: <br> _Code: *friend code or DM me* <br> _Wishlist: *either external link or typed list*", category: general)
+Channel.create!(name: "💌 wishlists", description: "Post your wishlist here so people can help you find what you're looking for, and don't worry, people will help you out if you post in this channel! You may make a text wishlist, post an external wishlist site or share a Google Spreadsheets link to your wish list! It is up to you. <br><br> ♥️ Please remember to only post once to prevent confusion over which list is the most updated list! <br> ♥️ If you want to update your wishlist, please edit your previous post. <br> ♥️ Please use this format when posting to make it easier for people to use the search function: <br><br> <span class='command'>_Code: *friend code or DM me* <br> _Wishlist: *either external link or typed list*</span>", category: general)
 thank = Channel.create!(name: "😌 thank-you-notes", description: "Thank the people who helped you out and that you think deserves a little something extra!", category: general)
 
 # Moist me section
@@ -106,16 +106,65 @@ redd = Bot.create!(
   intro: "An art bot made to make hosting your Redd visits and art giveaways easy and safe!",
   host: "🦊 Use <span class='command'>i!new</span> followed by the template below to create a new post. <br> 🦊 Use <span class='command'>i!queue dodo_code</span>, where dodo_code is your dodo code, Redd will DM that to the buyers when they join the queue. Use the same command again to update your dodo code, Redd will once again DM the new dodo code to everyone in queue. <br> 🦊 Use <span class='command'>i!delete</span> when you’re done hosting to delete your post.",
   queue: "🦊 To join a queue simply tap the emoji number on the post 1️⃣, 2️⃣, 3️⃣ or 4️⃣ to claim the art piece responding to that number. If you were fast enough to get it, Redd will DM you the dodo code and you’re good to go. <br> 🦊 When you’ve bought or collected your piece of art, use the command <span class='command'>I!buy</span> to update the queue and mark your claimed art piece as bought. No need to do more than that!",
-  template: "i!new <br> Redd Alert!!! <br> Shops: <br> Water: <br> Other: <br> Items: <br> 1. *name_of_art_piece* (real/fake) <br> 2. *name_of_art_piece* (real/fake) <br> 3. *name_of_art_piece* (real/fake) <br> 4. *name_of_art_piece* (real/fake)",
+  template: "i!new <br> Redd Alert!!! <br> Need ladder: <br> Shops: <br> Water: <br> Other: <br> Items: <br> 1. *name_of_art_piece* (real/fake) <br> 2. *name_of_art_piece* (real/fake) <br> 3. *name_of_art_piece* (real/fake) <br> 4. *name_of_art_piece* (real/fake)",
   example: "i!new <br> Redd is here, wooo!!! <br> Shops: Sure, limited items as well <br> Water: No thanks, all golden <br> Other: I'll be afk, ping me if there's any issues <br> Items: <br> 1. Valiant statue (real) <br> 2. Motherly statue (fake) <br> 3. Calm painting (real)",
-  commands: "<span class='command'>i!template</span> <br> Will send you a template to copy paste and fill in. Easy peasy! <br><br> <span class='command'>i!remove @mention </span> <br> The host can use this command if someone doesn't show up <br><br> <span class='command'>i!art</span> <br> Will send you a complete list of the art in the game, also a guide to know if your art is real or fake."
+  commands: "<span class='command'>i!template</span> <br> Will send you a template to copy paste and fill in. Easy peasy! <br><br> <span class='command'>i!remove <span class='person'>@person to remove</span> </span> <br> The host can use this command if someone doesn't show up <br><br> <span class='command'>i!art</span> <br> Will send you a complete list of the art in the game, also a guide to know if your art is real or fake."
 )
 
-clippy = Bot.create!(name: "Clippy", avatar: "https://cdn.discordapp.com/attachments/709008918575185961/730798938264829962/Clippy.png", intro: "", host: "", queue: "", template: "", example: "", commands: "")
-moistmaker = Bot.create!(name: "Moistmaker", avatar: "https://cdn.discordapp.com/emojis/737328744309719142.png?v=1", intro: "", host: "", queue: "", template: "", example: "", commands: "")
-tom = Bot.create!(name: "Tom Nook", avatar: "https://cdn.discordapp.com/attachments/727264651162681505/728199016306835476/Bot_Tom_Head_Transparent.png", intro: "", host: "", queue: "", template: "", example: "", commands: "")
-nooklings = Bot.create!(name: "Timmy and Tommy", avatar: "https://cdn.discordapp.com/attachments/727264651162681505/728199007482150962/Bot_Nooklings_Head_Transparent.png", intro: "", host: "", queue: "", template: "", example: "", commands: "")
-pascal = Bot.create!(name: "Pascal", avatar: "https://cdn.discordapp.com/attachments/726075201397325854/731557960282537984/Bot_Pascal_Head_Transparent.png", intro: "", host: "", queue: "", template: "", example: "", commands: "")
+pascal = Bot.create!(
+  name: "Pascal",
+  avatar: "https://cdn.discordapp.com/attachments/726075201397325854/731557960282537984/Bot_Pascal_Head_Transparent.png",
+  intro: "A bot used to thank people you think deserve a little something extra!",
+  host: "",
+  queue: "",
+  template: "i!thank <span class='person'>@person you want to thank</span> <br><br> or <br><br>i!thank  <span class='person'>@person you want to thank</span> *custom message*",
+  example: "i!thank <span class='person'>@Superstar from Sprinkle</span> <br><br> or <br><br>i!thank <span class='person'>@Emma from Stardew</span> for your lovely presents and for hosting Celeste!",
+  commands: ""
+)
+
+clippy = Bot.create!(
+  name: "Clippy",
+  avatar: "https://cdn.discordapp.com/attachments/709008918575185961/730798938264829962/Clippy.png",
+  intro: "A queue bot made to make hosting and visiting islands easy and safe. Clippy is used to host turnip prices, meteor showers, NPC visits and villagers crafting DIYs.",
+  host: "🖇 Use <span class='command'>n!new</span> followed by the template below to create a new post. <br> 🖇 Use <span class='command'>n!queue dodo_code queue_size</span> where dodo_code is your dodo code and queue size is the amount of people you want to visit at the same time, 3 is the default but for busy queues we recommend adjusting that to 2 people at a time. Clippy will DM the dodo code to anyone who joins the queue. Use the same command again to update your dodo code, Clippy will once again DM the new dodo code to everyone in queue. <br> 🖇 Use <span class='command'>n!close</span> if you want to close the queue to avoid more people joining. <br> 🖇 Use <span class='command'>n!delete</span> when you’re done hosting to delete your post. <br><br> 💰 If you're hosting a good turnip price, we recommend mentioning that multiple trips are allowed but that people should re-queue to make space for everyone. <br> 🌟 Remember to adjust the visitor timeout if you're hosting a meteor shower since it can take more than 20 minutes per visitor.",
+  queue: "🖇 To join a queue simply tap the airplane emoji ✈️ which will put you in line. When it's your turn, Clippy will DM you the dodo code and you’re good to go. <br> 🖇 When you've finished your visit make sure to un-react on the airplane emoji ✈️ to make space for the next one in line!",
+  template: "Depending on what you're hosting<br><br>n!new <br> Visitor / DIY recipe / Price: <br> Location: <br> Code: (Don't include this if using a queue, which we recommend) <br> Shops: <br> Need Watering: <br> Other:",
+  example: "Imagine I'm hosting Celeste<br><br>n!new <br> Visitor: Star birb Celeste is here <br> Location: Trapped left of airport <br> Code: Queue <br> Shops: All closed <br> Need Watering: No thanks, all golden <br> Other: Please take some free DIYs right side of airport.",
+  commands: "<span class='command'>n!visitortimeout minutes</span> <br> To override the default visitor in queue timeout of 20 minutes use this command, where minutes is the number of minutes you'd like to change it to. <br><br> <span class='command'>n!posttimeout hours</span> <br> To override the default post timeout of 3 hours, use this command where hours is the number of hours you'd like to change it to. <br><br> <span class='command'>n!remove <span class='person'>@person to remove</span> </span> <br> The host can use this command if someone doesn't show up or forgets to leave the queue."
+)
+
+moistmaker = Bot.create!(
+  name: "Moistmaker",
+  avatar: "https://cdn.discordapp.com/emojis/737328744309719142.png?v=1",
+  intro: "This is a bot that helps you get your golden water sparkles every day to optimize your flower cloning and breeding.",
+  host: "✨ To join the sparkle queue, type <span class='command'>q!join #</span>. Default is 5 waterers, so if you need less please specify how many. <span class='command'># = waterers needed.</span> <br> ✨ If there's a queue, helping to water can get bumped up from the lobby to the actual sparkle queue. <br> ✨ When it's your turn, use <span class='command'>q!dodo code instructions_here</span>, Where code is your dodo code along with picture and / or written instructions in the same message. <br> ✨ Check attendence with minus key (-) > View Other Passports. <br> ✨ When everyone has landed, please leave the sparkle queue with the command <span class='command'>q!leave</span>. <br> ✨ If the session crashes, press the distress emoji react so the bot can ping your waterers. Use <span class='command'>q!dodo code instructions_here</span> again to put up your new code. <br> ✨ Use the minus key (-) to end session when everyone is done watering. <br> ✨ Please don't have people shop, browse and other things in the sparkle station as it will slow down the queue.",
+  queue: "✨ React on the watercan emoji to join that island as a water helper. You can always check the pins to see the recent islands in need of water. <br> ✨ When you've reacted Moistmaker will DM you the dodo code and instructions. <br> ✨ Proceed to the island. Note: Interferences may last for 8 minutes while everyone arrives! Just be patient. <br> ✨ Please be courteous on islands. Do not pick, take or pluck without permission. <br> ✨ When everyone is done watering, the host will end the session. <b>Do not use the minus key (-) to leave quietly</b>." ,
+  template: "q!join # <br><br> q!dodo dodo instructions_here",
+  example: "q!join 3 <br><br> q!dodo 12345 Please water the 3 dirt patches right side of airport. Cans provided!",
+  commands: "<span class='command'>q!view</span><br> Displays the current sparkle queue <br><br> <span class='command'>q!mod</span><br> Check who's the current mod on duty <br><br> <span class='command'>q!status</span><br> Check your watering quota. This isn't too important but we do expect people who uses the sparkle station to help out when they can. <br><br> <span class='command'>q!order</span><br> Become a Moistener! Join the order to get pinged to help on islands <br><br> <span class='command'>q!retire</span><br> Retire from the Order of the Moist when you're done playing for the day to avoid getting pinged when you sleep."
+)
+
+tom = Bot.create!(
+  name: "Tom Nook",
+  avatar: "https://cdn.discordapp.com/attachments/727264651162681505/728199016306835476/Bot_Tom_Head_Transparent.png",
+  intro: "A bot used to keep track of your Nook Mile Item and resource trades!",
+  host: "🧱 Use <span class='command'>i!trade <span class='person'>@other_person</span> *terms of your deal*</span> when you want to form a deal with someone <br> 🧱 Use <span class='command'>i!agree <span class='person'>@other_person</span></span> if both parties agree with the deal. You both have to use this command. If you DON'T agree with the terms, you can <span class='command'>i!reject</span> instead. <br> 🧱 If both parties agree, the deal will be posted as a receipt. <br> 🧱 Use <span class='command'>i!done <span class='person'>@other_person</span></span> when you are done with your trade and everyone delivered their part of the deal to finish the transaction.",
+  queue: "",
+  template: "i!trade <span class='person'>@other_person</span> *terms of your deal* <br><br> i!agree <span class='person'>@other_person</span> <br><br> i!done <span class='person'>@other_person</span>",
+  example: "i!trade <span class='person'>@Peter from PartyPants</span> My black street lamp for your white street lamp <br><br> i!agree <span class='person'>@Peter from PartyPants</span> <br><br> i!done <span class='person'>@Peter from PartyPants</span>",
+  commands: "<span class='command'>i!mytrades</span> <br> This will show you all your receipts for your convenience and also all your open trades with people."
+)
+
+nooklings = Bot.create!(
+  name: "Timmy & Tommy",
+  avatar: "https://cdn.discordapp.com/attachments/727264651162681505/728199007482150962/Bot_Nooklings_Head_Transparent.png",
+  intro: "A bot used to host catalogue parties and catalogue swaps!",
+  host: "🍃 Use <span class='command'>i!catalogue party/swap dodo queue_cap</span> to start a catalogue event. Where dodo is your dodo code, queue_cap is the maximum of people visiting in total. Timmy & Tommy will make sure people get the dodo code when they join the queue. <br> 🍃 Use <span class='command'>i!instructions *text instructions* *picture if you want*</span> to add some instructions to your catalogue post. <br> 🍃 Use <span class='command'>i!dodo dodo</span> if you need to update or edit your dodo code. <br> 🍃 Use <span class='command'>i!close</span> to cutoff your queue to make sure you don't get any further visitors. <br> 🍃 Use <span class='command'>i!delete</span> when you’re done hosting to delete your post.",
+  queue: "🍃 Join the queue for a catalogue party by reacting with the blob emoji. You will get the dodo code in a DM once it's your turn. <br> 🍃 When you've finished your visit make sure to un-react on the blob emoji to make space for the next one in line!",
+  template: "i!catalogue party/swap dodo queue_cap <br><br> i!instructions *text instructions* *picture if you want*",
+  example: "i!catalogue party 12345 5 <br><br> i!instructions I have the full white rattan set available to catalogue",
+  commands: "<span class='command'>i!boot <span class='person'>@person to remove</span></span> <br> If someone forgets to un-react the host can remove them manually from the queue."
+)
 
 puts "Done creating bots"
 

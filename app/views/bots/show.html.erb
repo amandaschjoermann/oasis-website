@@ -43,10 +43,23 @@
     </div>
 
     <h3 class="font-weight-bold text-center my-5">How to use <%= @bot.name %></h3>
-    <div class="font-weight-bold">How to host</div>
-    <div class="mb-5">
-      <%= @bot.host.html_safe %>
-    </div>
+
+    <% if @bot.name == "Pascal" %>
+      <div class="font-weight-bold">Instructions</div>
+      <div class="mb-5">
+        <div><%= @bot.name %> is really easy to use, just follow the template instructions below and you're good to go! Happy thanking 💚</div>
+      </div>
+    <% elsif @bot.name == "Tom Nook" %>
+      <div class="font-weight-bold">Instructions</div>
+      <div class="mb-5">
+        <%= @bot.host.html_safe %>
+      </div>
+    <% elsif @bot.host.present? %>
+      <div class="font-weight-bold">How to host</div>
+      <div class="mb-5">
+        <%= @bot.host.html_safe %>
+      </div>
+    <% end %>
 
     <div class="row">
       <div class="col-12 col-md-5">
@@ -63,10 +76,18 @@
       </div>
     </div>
 
+    <% if @bot.name == "Moistmaker" %>
+      <div class="font-weight-bold">How to help water</div>
+      <%= @bot.queue.html_safe %>
+    <% elsif @bot.queue.present? %>
+      <div class="font-weight-bold">How to queue</div>
+      <%= @bot.queue.html_safe %>
+    <% end %>
 
-
-    <div class="font-weight-bold">How to queue</div>
-    <%= @bot.queue.html_safe %>
+    <% if @bot.commands.present? %>
+      <div class="font-weight-bold mt-5">Other useful commands</div>
+      <%= @bot.commands.html_safe %>
+    <% end %>
 
   </div>
 
