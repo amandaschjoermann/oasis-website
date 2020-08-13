@@ -6,6 +6,12 @@
   font-weight: bold;
 }
 
+@media (min-width: 0px) and (max-width: 750px) {
+  .oasis-header {
+    font-size: 28px;
+  }
+}
+
 .server-icon img {
   width: 55px;
 }
