@@ -5,7 +5,7 @@
   </div>
 
   <% @spreadsheets.each do |spreadsheet| %>
-    <div class="spreadsheet d-flex align-items-center my-4 bg-white p-3 px-4 border-green shadow-sm">
+    <div class="spreadsheet d-flex align-items-center my-4 bg-white p-3 px-4 shadow-sm">
       <%= image_tag spreadsheet.icon, alt: "alttext", height: 30 %>
       <div class="ml-4">
         <div class="font-weight-bold"> <%= spreadsheet.title %> </div>
