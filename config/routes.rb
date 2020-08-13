@@ -16,5 +16,6 @@ Rails.application.routes.draw do
   resources :categories, only: [:show]
   resources :spreadsheets, only: [:index]
   resources :bots, only: [:show]
+  resources :infographics, only: [:index]
 
 end

@@ -139,3 +139,15 @@ a.login-button {
 }
 
 
+li.infographic {
+  display: inline-block;
+  img.image {
+    width: 100%;
+    transition: 0.2s ease;
+  }
+  .infographic-tags {
+    display: none;
+  }
+}
+
+

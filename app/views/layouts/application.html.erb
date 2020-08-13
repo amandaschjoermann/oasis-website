@@ -50,7 +50,7 @@
           <%= link_to rules_path do %>
             <div class="d-flex align-items-center">
               Server rules
-              <i class="far fa-bookmark grey-icon ml-3"></i>
+              <i class="far fa-bookmark tan-icon ml-3"></i>
             </div>
           <% end %>
         </div>
@@ -96,15 +96,22 @@
 
             <%= link_to spreadsheets_path do %>
               <div class="p-3 d-flex align-items-center justify-content-end green-border-bottom">
-                <div class="mr-3">Resources</div>
-                <%= image_tag "https://discordapp.com/assets/7c13aa0def6ccb6932f47dedd33f59c1.svg", alt: "alttext", height: 15 %>
+                <div class="mr-3">Useful links</div>
+                <i class="far fa-file-excel tan-icon"></i>
+              </div>
+            <% end %>
+
+            <%= link_to infographics_path do %>
+              <div class="p-3 d-flex align-items-center justify-content-end green-border-bottom">
+                <div class="mr-3">Infographics</div>
+                <i class="far fa-file-image tan-icon"></i>
               </div>
             <% end %>
 
             <%= link_to destroy_user_session_path, method: :delete do %>
               <div class="p-3 d-flex align-items-center justify-content-end green-border-bottom">
                 <div class="mr-3">Log out</div>
-                <i class="fas fa-door-closed grey-icon"></i>
+                <i class="far fa-times-circle grey-icon"></i>
               </div>
             <% end %>
           </div>

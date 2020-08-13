@@ -1,18 +1,22 @@
 <div class="container home-wrapper">
   <div class="d-flex flex-column align-items-center justify-content-center mb-5">
     <h1 class="oasis-header text-center">A list of all the useful links you might need</h1>
-    <p>Spreadsheets made by our members and mod team to help you optimize your Animal Crossing experience!</p>
+    <p>Spreadsheets and useful links made to help you optimize your Animal Crossing experience!</p>
   </div>
 
-  <% @spreadsheets.each do |spreadsheet| %>
-    <div class="spreadsheet d-flex align-items-center my-4 bg-white p-3 px-4 shadow-sm">
-      <%= image_tag spreadsheet.icon, alt: "alttext", height: 30 %>
-      <div class="ml-4">
-        <div class="font-weight-bold"> <%= spreadsheet.title %> </div>
-        <%= link_to spreadsheet.url, target: "_blank", class: "spreadsheet-link" do %>
-          <div>link to <%= spreadsheet.title.downcase %> spreadsheet</div>
-        <% end %>
+  <div class="row">
+    <% @spreadsheets.each do |spreadsheet| %>
+      <div class="col-12 col-md-6">
+        <div class="spreadsheet d-flex align-items-center my-4 bg-white p-3 px-4 shadow-sm">
+          <%= image_tag spreadsheet.icon, alt: "alttext", height: 30 %>
+          <div class="ml-4">
+            <div class="font-weight-bold"> <%= spreadsheet.title %> </div>
+            <%= link_to spreadsheet.url, target: "_blank", class: "spreadsheet-link" do %>
+              <div>link to <%= spreadsheet.title.downcase %></div>
+            <% end %>
+          </div>
+        </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>

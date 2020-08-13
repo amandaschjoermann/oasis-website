@@ -1,0 +1,2 @@
+class Infographic < ApplicationRecord
+end

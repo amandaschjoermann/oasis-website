@@ -1,5 +1,6 @@
 puts "Cleaning up the database"
 
+Infographic.destroy_all
 Bot.destroy_all
 Channel.destroy_all
 Category.destroy_all
@@ -93,6 +94,14 @@ puts "Creating spreadsheets"
 Spreadsheet.create!(title: "Dream Codes", url: "https://docs.google.com/spreadsheets/d/1JZS3UtLjJpJvPYyqKCoHMDgM_iJklsQSJ4CGwYiWsbA/edit#gid=0", icon: "https://discordapp.com/assets/f341538d6092b98ba32c58ad45537267.svg", channel: landing)
 Spreadsheet.create!(title: "DIY Matchmaking", url: "https://docs.google.com/spreadsheets/d/1tsPJ7aWj0cgKaHHwve9GdTO--txhgsS7BpsPWi5Xl2o/edit#gid=1480786600", icon: "https://cdn.discordapp.com/emojis/727256338798870549.png?v=1", channel: landing)
 Spreadsheet.create!(title: "Catalogue Listing", url: "https://docs.google.com/spreadsheets/d/1uFXnB8az9IDoXYmjLLR9yI23eUb5aEc0ahMgIDqi7Bs/edit#gid=283475619", icon: "https://cdn.nookazon.com/nookazon/icons/touch.png", channel: landing)
+Spreadsheet.create!(title: "Villager Compatibility Tool", url: "https://docs.google.com/spreadsheets/d/1Sc2HJRcgg-Q_CsFnewIB3n2f4Tgj-QT33qUCrItj0MU/edit#gid=773486971", icon: "https://discordapp.com/assets/01c80723fb8cbdcb9e22747cd88e07e4.svg", channel: landing)
+Spreadsheet.create!(title: "Time-Travel, Glitches & Datamine Masterpost", url: "https://docs.google.com/document/d/169F3cp2THB-9G74rSzAWEqDrVY3yBSHtkOhPiP-uf9A/edit?ts=5ec81591", icon: "https://discordapp.com/assets/c3b6bfe6efe3d61d1e9198fe347ca06c.svg", channel: landing)
+Spreadsheet.create!(title: "Villagers, Exteriors & Interiors", url: "https://docs.google.com/spreadsheets/d/1QrLaxUqxa56ncaoBVR7IbPfx1nShoMd81Odm0BgXTd4/edit#gid=0", icon: "https://cdn.discordapp.com/emojis/707365923555770408.png?v=1", channel: landing)
+Spreadsheet.create!(title: "All About Garden Layouts", url: "https://yuexr.github.io/acnh/garden_layouts.html", icon: "https://cdn.discordapp.com/emojis/707349667964256308.png?v=1", channel: landing)
+Spreadsheet.create!(title: "Blue Rose Methods", url: "https://yuexr.github.io/acnh/bluerose.html", icon: "https://cdn.discordapp.com/emojis/727261998123057232.png?v=1", channel: landing)
+Spreadsheet.create!(title: "Flower Breeding Simulator", url: "https://gardenscience.ac/", icon: "https://cdn.discordapp.com/emojis/727338709481029722.png?v=1", channel: landing)
+Spreadsheet.create!(title: "MeteoNook: Find Your Weather Seed", url: "https://wuffs.org/acnh/weather/", icon: "https://discordapp.com/assets/e63b6822e54d6334126831f99fbda142.svg", channel: landing)
+
 
 puts "Done creating spreadsheets"
 
@@ -199,5 +208,420 @@ BotChannel.create!(bot: pascal, channel: thank)
 
 puts "Done linking bots to channels"
 
+########################################################
 
+puts "Creating infographics"
+
+########################################################
+
+puts "Friendship guide"
+
+Infographic.create!(
+  title: "Friendship Guide: Tiers (1 of 7)",
+  image_url: "https://yuexr.github.io/img/fs/1.png",
+  tags: "friendship, interactions, new friends, good friends, best friends, gifts, points, wrapped"
+)
+
+Infographic.create!(
+  title: "Friendship Guide: Points (2 of 7)",
+  image_url: "https://yuexr.github.io/img/fs/2.png",
+  tags: "friendship, interactions, new friends, good friends, best friends, points, wrapped"
+)
+
+Infographic.create!(
+  title: "Friendship Guide: Daily Gifts (3 of 7)",
+  image_url: "https://yuexr.github.io/img/fs/3.png",
+  tags: "friendship, interactions, new friends, good friends, best friends, gifts, points, wrapped"
+)
+
+Infographic.create!(
+  title: "Friendship Guide: Birthday Gifts (4 of 7)",
+  image_url: "https://yuexr.github.io/img/fs/4.png",
+  tags: "friendship, interactions, new friends, good friends, best friends, gifts, points, wrapped, birthday"
+)
+
+Infographic.create!(
+  title: "Friendship Guide: Quest I (5 of 7)",
+  image_url: "https://yuexr.github.io/img/fs/5.png",
+  tags: "friendship, interactions, new friends, good friends, best friends, points, wrapped, quest, sickness, treasure hunt"
+)
+
+Infographic.create!(
+  title: "Friendship Guide: Quest II (6 of 7)",
+  image_url: "https://yuexr.github.io/img/fs/6.png",
+  tags: "friendship, interactions, new friends, good friends, best friends, points, wrapped, bug, fish, lost item, delivery"
+)
+
+Infographic.create!(
+  title: "Friendship Guide: Road to BFFs! (7 of 7)",
+  image_url: "https://yuexr.github.io/img/fs/7.png",
+  tags: "friendship, interactions, new friends, good friends, best friends, points, wrapped, villager photo"
+)
+
+########################################################
+
+puts "Reactions"
+
+Infographic.create!(
+  title: "Learning Reactions",
+  image_url: "https://yuexr.github.io/img/reactions.png",
+  tags: "reactions, reaction, speech bubble"
+)
+
+########################################################
+
+puts "Gifting guide"
+
+Infographic.create!(
+  title: "Villager Gifting Guide: Daily Gifts I (1 of 4)",
+  image_url: "https://yuexr.github.io/img/gift/01.png",
+  tags: "gifts, friendship"
+)
+
+Infographic.create!(
+  title: "Villager Gifting Guide: Daily Gifts II (2 of 4)",
+  image_url: "https://yuexr.github.io/img/gift/02.png",
+  tags: "gifts, friendship, wrapping, inventory, wrapped bells"
+)
+
+Infographic.create!(
+  title: "Villager Gifting Guide: Birthday Gifts (3 of 4)",
+  image_url: "https://yuexr.github.io/img/gift/03.png",
+  tags: "gifts, friendship, wrapping, fruit, birthday, turnip, cake"
+)
+
+Infographic.create!(
+  title: "Villager Gifting Guide: Extra Gifting Tips (4 of 4)",
+  image_url: "https://yuexr.github.io/img/gift/04.png",
+  tags: "gifts, friendship, wrapping, fruit, fruit stack, framed photo, safe gifting"
+)
+
+########################################################
+
+puts "Move-Out handbook"
+
+Infographic.create!(
+  title: "Move-Out Handbook: Getting Started (1 of 7)",
+  image_url: "https://yuexr.github.io/img/mo/1.png",
+  tags: "move-out, move out, moving out, campsite, time travelling, time-travelling"
+)
+
+Infographic.create!(
+  title: "Move-Out Handbook: Island Move-Out (2 of 7)",
+  image_url: "https://yuexr.github.io/img/mo/2.png",
+  tags: "natural move-out, move out, moving out, in boxes, adopt, thought bubble"
+)
+
+Infographic.create!(
+  title: "Move-Out Handbook: Villager Ask Chance (3 of 7)",
+  image_url: "https://yuexr.github.io/img/mo/3.png",
+  tags: "natural move-out, move out, moving out, friendship"
+)
+
+Infographic.create!(
+  title: "Move-Out Handbook: Regular Campers (4 of 7)",
+  image_url: "https://yuexr.github.io/img/mo/4.png",
+  tags: "natural move-out, move out, moving out, campsite, timeline, adopt, in boxes"
+)
+
+Infographic.create!(
+  title: "Move-Out Handbook: Amiibo Campers (5 of 7)",
+  image_url: "https://yuexr.github.io/img/mo/5.png",
+  tags: "natural move-out, move out, moving out, campsite, amiibo, diy, in boxes"
+)
+
+Infographic.create!(
+  title: "Move-Out Handbook: Move-Out Method (6 of 7)",
+  image_url: "https://yuexr.github.io/img/mo/6.png",
+  tags: "natural move-out, move out, moving out, time travelling, time-travelling, empty plot"
+)
+
+Infographic.create!(
+  title: "Move-Out Handbook: Additional Notes (7 of 7)",
+  image_url: "https://yuexr.github.io/img/mo/7.png",
+  tags: "natural move-out, move out, moving out, in boxes, friendship"
+)
+
+########################################################
+
+puts "Flower Guide"
+
+Infographic.create!(
+  title: "Gardening 101",
+  image_url: "https://yuexr.github.io/img/gardening101.png",
+  tags: "flower growth, water, genotypes, breeding, cloning"
+)
+
+Infographic.create!(
+  title: "Visitor Watering",
+  image_url: "https://yuexr.github.io/img/watering.png",
+  tags: "water, breeding, cloning, golden sparkles"
+)
+
+Infographic.create!(
+  title: "Golden Rose Guide",
+  image_url: "https://yuexr.github.io/img/goldrose.png",
+  tags: "layout, gold, golden, rose, gold flag, golden watering can"
+)
+
+Infographic.create!(
+  title: "Simple Hybrid Cloning Layout",
+  image_url: "https://yuexr.github.io/img/cloning.png",
+  tags: "hybrids, layout, cloning"
+)
+
+########################################################
+
+puts "Wedding Guide"
+
+Infographic.create!(
+  title: "Wedding Season",
+  image_url: "https://yuexr.github.io/img/wedding.png",
+  tags: "wedding, photoshoot, heart crystals"
+)
+
+########################################################
+
+puts "Bug-Off and Fishing Tourney"
+
+Infographic.create!(
+  title: "Bug-Off (1 of 2)",
+  image_url: "https://yuexr.github.io/img/bugoff1.png",
+  tags: "bug, bug-off, bug off, prizes, trophies"
+)
+
+Infographic.create!(
+  title: "Bug-Off (2 of 2)",
+  image_url: "https://yuexr.github.io/img/bugoff2.png",
+  tags: "bug, bug-off, bug off, prizes, trophies"
+)
+
+Infographic.create!(
+  title: "Fishing Tourney (1 of 2)",
+  image_url: "https://yuexr.github.io/img/fishtourney.png",
+  tags: "fish, fishing tournament, fishing tourney, prizes, trophies"
+)
+
+Infographic.create!(
+  title: "Fishing Tourney (2 of 2)",
+  image_url: "https://yuexr.github.io/img/fishtourney2.png",
+  tags: "fish, fishing tournament, fishing tourney, prizes, trophies"
+)
+
+########################################################
+
+puts "New Firework Update"
+
+Infographic.create!(
+  title: "Fireworks Items",
+  image_url: "https://yuexr.github.io/img/hanabi.png",
+  tags: "fireworks, shows, boppers, balloons"
+)
+
+Infographic.create!(
+  title: "Seasonal Items",
+  image_url: "https://yuexr.github.io/img/nookseasonal14.png",
+  tags: "qixi festival, hikoboshi, orihime, grape festival, cowboy festival, mid-autumn festival, moon-viewing day"
+)
+
+Infographic.create!(
+  title: "King Tut Mask",
+  image_url: "https://yuexr.github.io/img/kingtut.png",
+  tags: "king tut mask, gold nugget, hit rocks"
+)
+
+Infographic.create!(
+  title: "Repoting Dreams",
+  image_url: "https://yuexr.github.io/img/dreamreport1.png",
+  tags: "dream code, dreams, report"
+)
+
+Infographic.create!(
+  title: "Repoting Dreams FAQ I",
+  image_url: "https://yuexr.github.io/img/dreamreport_faq1.png",
+  tags: "dream code, dreams, report"
+)
+
+Infographic.create!(
+  title: "Repoting Dreams FAQ II",
+  image_url: "https://yuexr.github.io/img/dreamreport_faq2.png",
+  tags: "dream code, dreams, report"
+)
+
+########################################################
+
+puts "Summer update"
+
+Infographic.create!(
+  title: "Diving Gear",
+  image_url: "https://yuexr.github.io/img/divinggear.png",
+  tags: "wet suits, snorkel, diving"
+)
+
+Infographic.create!(
+  title: "Pascal FAQ",
+  image_url: "https://yuexr.github.io/img/pascal.png",
+  tags: "pascal, scallops, mermaid, pearl"
+)
+
+Infographic.create!(
+  title: "Mermaid Clothing",
+  image_url: "https://yuexr.github.io/img/mermaidclothing.png",
+  tags: "mermaid, princess, clothing"
+)
+
+Infographic.create!(
+  title: "Mermaid DIY Set",
+  image_url: "https://yuexr.github.io/img/mermaidset.png",
+  tags: "mermaid, furniture, diy"
+)
+
+Infographic.create!(
+  title: "Gullivarrr's Quest",
+  image_url: "https://yuexr.github.io/img/gullivarrr.png",
+  tags: "gullivarrr, pirate, treasure, communicator"
+)
+
+Infographic.create!(
+  title: "Pirate Loot",
+  image_url: "https://yuexr.github.io/img/pirate.png",
+  tags: "gullivarrr, pirate, treasure, communicator"
+)
+
+Infographic.create!(
+  title: "Sea Creatures",
+  image_url: "https://yuexr.github.io/img/seacreatures.png",
+  tags: "sea critters, diving, ocean, critterpedia"
+)
+
+########################################################
+
+puts "NPC visits"
+
+Infographic.create!(
+  title: "NPC Schedule I",
+  image_url: "https://yuexr.github.io/img/npcskd.png",
+  tags: "npc, leif, saharah, kicks, label, gullivarrr, gulliver, CJ, flick, redd"
+)
+
+Infographic.create!(
+  title: "NPC Schedule II",
+  image_url: "https://yuexr.github.io/img/npcskd_tldr.png",
+  tags: "npc, leif, saharah, kicks, label, gullivarrr, gulliver, CJ, flick, redd, wisp, celeste, KK slider, pascal, daisy mae"
+)
+
+########################################################
+
+puts "Stars and more"
+
+Infographic.create!(
+  title: "All About Stars: Meteor Showers (1 of 2)",
+  image_url: "https://yuexr.github.io/img/starshower.png",
+  tags: "weather, heavy meteor shower, light shower, celeste, wishes"
+)
+
+Infographic.create!(
+  title: "All About Stars: Star Fragments (2 of 2)",
+  image_url: "https://yuexr.github.io/img/starfrag.png",
+  tags: "meteor shower, star fragments, shooting stars, wishes"
+)
+
+########################################################
+
+puts "Weather Seed"
+
+Infographic.create!(
+  title: "MeteoNook",
+  image_url: "https://yuexr.github.io/img/meteonook.png",
+  tags: "weather seed, weather data"
+)
+
+########################################################
+
+puts "Recycle Bin"
+
+Infographic.create!(
+  title: "Recycle Box",
+  image_url: "https://yuexr.github.io/img/recycle.png",
+  tags: "clean up, recycle box"
+)
+
+########################################################
+
+puts "Mom's items"
+
+Infographic.create!(
+  title: "Mom's Items I",
+  image_url: "https://cdn.discordapp.com/attachments/727901653390589954/728249366233743400/mom1.png",
+  tags: "mom's items, mom"
+)
+
+Infographic.create!(
+  title: "Mom's Items II",
+  image_url: "https://cdn.discordapp.com/attachments/727901653390589954/728249372709748776/mom2.png",
+  tags: "mom's items, mom"
+)
+
+########################################################
+
+puts "Moving in"
+
+Infographic.create!(
+  title: "Move In Mechanics",
+  image_url: "https://cdn.discordapp.com/attachments/727901653390589954/728646436794794075/image0.png",
+  tags: "moving in, mystery island, campsite"
+)
+
+########################################################
+
+puts "Nook Mile Items"
+
+Infographic.create!(
+  title: "Nook Mile Items Colour Coding",
+  image_url: "https://cdn.discordapp.com/attachments/727901653390589954/728647962607222786/image0.jpg",
+  tags: "nook mile item, nmi"
+)
+
+
+########################################################
+
+puts "Flowers"
+
+Infographic.create!(
+  title: "Flower & Bush Colour Circle",
+  image_url: "https://cdn.discordapp.com/attachments/727901653390589954/730574360636817428/flowerchart.png",
+  tags: "flowers, bloom, season, colour, color"
+)
+
+Infographic.create!(
+  title: "The Mystery of The Lily",
+  image_url: "https://cdn.discordapp.com/attachments/727901653390589954/742107756819120128/LotV.png",
+  tags: "lily of the valley, five stars"
+)
+
+Infographic.create!(
+  title: "Rock Garden 101 I",
+  image_url: "https://cdn.discordapp.com/attachments/727901653390589954/734925729027850280/grock_01.png",
+  tags: "rocks, rock garden, mannequins"
+)
+
+Infographic.create!(
+  title: "Rock Garden 101 II",
+  image_url: "https://cdn.discordapp.com/attachments/727901653390589954/734925731024339004/grock_02.png",
+  tags: "rocks, rock garden, mannequins, toilet"
+)
+
+Infographic.create!(
+  title: "Scallop Finding Tips",
+  image_url: "https://cdn.discordapp.com/attachments/727901653390589954/731354836226015282/image1.jpg",
+  tags: "scallops, bubbles, shadow size"
+)
+
+Infographic.create!(
+  title: "Pearl Finding Tips",
+  image_url: "https://cdn.discordapp.com/attachments/727901653390589954/731354836007911485/image0.jpg",
+  tags: "pearls, bubbles, shadow size"
+)
+
+puts "Done creating infographics"
 

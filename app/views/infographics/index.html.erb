@@ -1,0 +1,36 @@
+<div class="container home-wrapper pb-5">
+  <div class="d-flex flex-column align-items-center justify-content-center mb-5">
+    <h1 class="oasis-header text-center">Infographic guides</h1>
+    <p>Search through the different infographics we've collected</p>
+  </div>
+
+
+    <div id="infographics-list">
+      <!-- working searchbar -->
+      <div class="d-flex justify-content-center mb-5">
+        <input class="search p-3 w-50" placeholder="Find the infographic you're looking for">
+      </div>
+        <div class="row">
+          <ul class="list-unstyled list w-100">
+            <% @infographics.each do |infographic| %>
+              <li class="infographic col-12 col-md-6">
+                <div class="border-light-green p-5 mb-4 m-1 bg-white shadow-sm">
+                  <h6 class="infographic-title font-weight-bold"><%= infographic.title %></h6>
+                  <%= link_to infographic.image_url, target: "_blank" do %>
+                    <div><%= image_tag infographic.image_url, alt: "alttext", class: "image"%></div>
+                  <% end %>
+                  <div class="infographic-tags"><%= infographic.tags %></div>
+                </div>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+    </div> <!-- closing #channels-list -->
+
+</div> <!-- closing container -->
+
+<div id="hacker-list">
+    <ul class="list"></ul>
+</div>
+
+<%= javascript_pack_tag "infographic-search" %>

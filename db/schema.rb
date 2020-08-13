@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_11_100103) do
+ActiveRecord::Schema.define(version: 2020_08_13_105157) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,6 +55,14 @@ ActiveRecord::Schema.define(version: 2020_08_11_100103) do
     t.index ["category_id"], name: "index_channels_on_category_id"
   end
 
+  create_table "infographics", force: :cascade do |t|
+    t.string "title"
+    t.string "image_url"
+    t.string "tags"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "spreadsheets", force: :cascade do |t|
     t.string "title"
     t.string "url"
@@ -78,6 +86,7 @@ ActiveRecord::Schema.define(version: 2020_08_11_100103) do
     t.string "image"
     t.string "discord_name"
     t.string "oasis_name"
+    t.string "roles"
     t.boolean "mod"
     t.boolean "oasis_member"
     t.index ["email"], name: "index_users_on_email", unique: true
