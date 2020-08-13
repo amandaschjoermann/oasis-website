@@ -18,7 +18,7 @@
   .card-tip-title {
     font-size: 20px;
     font-weight: bold;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
   }
 }
 
@@ -27,20 +27,36 @@
   background-color: #deeffc;
 }
 
+.border-light-blue {
+  border: 2px solid #b9daf7;
+}
+
 .bg-light-green {
   background-color: #d5e8e0;
+}
+
+.border-light-green {
+  border: 2px solid #b3e0cc;
 }
 
 .bg-semi-blue {
   background-color: #b2eef7;
 }
 
+.border-semi-blue {
+  background-color: #87e4f2;
+}
+
 .bg-semi-green {
   background-color: #b1efe8;
 }
 
+.border-semi-green {
+  border: 2px solid #94e0d7;
+}
+
 .spreadsheet {
-  border: 2px solid #d5e8e0;
+  border: 2px solid #8aeadf;
 }
 
 a.spreadsheet-link {
