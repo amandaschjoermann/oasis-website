@@ -86,7 +86,6 @@ ActiveRecord::Schema.define(version: 2020_08_13_105157) do
     t.string "image"
     t.string "discord_name"
     t.string "oasis_name"
-    t.string "roles"
     t.boolean "mod"
     t.boolean "oasis_member"
     t.index ["email"], name: "index_users_on_email", unique: true
