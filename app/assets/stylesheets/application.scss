@@ -21,6 +21,12 @@ body {
   background-attachment: fixed;
 }
 
+@media (min-width: 0px) and (max-width: 750px) {
+  body {
+    background-image: asset-url("phone-bg.png");
+  }
+}
+
 a {
   color: rgba(30,30,30,1);
   transition: 0.05s ease;
