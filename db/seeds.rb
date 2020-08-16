@@ -73,8 +73,8 @@ Channel.create!(name: "🐳🐝 island-events", description: "A channel to host 
 
 # Off topic section
 
-Channel.create!(name: "💬 off-topic", description: "The same as #💭off-topic-too: a chat for all things besides ACNH. Please stay civil. Talk about nothing and everything. We have duplicate channels so you can always start a new conversation without interrupting an already ongoing topic.", category: off_topic)
-Channel.create!(name: "💭 off-topic-too", description: "The same as #💬off-topic: a chat for all things besides ACNH. Please stay civil. Talk about nothing and everything. We have duplicate channels so you can always start a new conversation without interrupting an already ongoing topic.", category: off_topic)
+Channel.create!(name: "💬 off-topic", description: "The same as #🗨off-topic-too: a chat for all things besides ACNH. Please stay civil. Talk about nothing and everything. We have duplicate channels so you can always start a new conversation without interrupting an already ongoing topic.", category: off_topic)
+Channel.create!(name: "🗨 off-topic-too", description: "The same as #💬off-topic: a chat for all things besides ACNH. Please stay civil. Talk about nothing and everything. We have duplicate channels so you can always start a new conversation without interrupting an already ongoing topic.", category: off_topic)
 Channel.create!(name: "🐶 the-zoo", description: "Besides loving Animal Crossing we also love your real life animals. Show them off, we would love to see them!", category: off_topic)
 Channel.create!(name: "🍲 yum-kitchen", description: "Show off your baking skills, your best tips for eating out, your most delicious recipes and everything food related. Yum!", category: off_topic)
 Channel.create!(name: "🤪 memes", description: "Not much to explain here. Wanna laugh, look in this channel!", category: off_topic)
