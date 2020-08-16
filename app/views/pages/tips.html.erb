@@ -1,4 +1,4 @@
-<div class="container home-wrapper pb-5">
+<div class="container home-wrapper pb-5 px-3 px-md-5">
   <div class="d-flex flex-column align-items-center justify-content-center mb-5">
     <h1 class="oasis-header text-center">Good things to know when joining The Oasis</h1>
     <p class="text-center">These tips and tricks will help you get more out of the server from the start!</p>
@@ -18,7 +18,7 @@
   <div class="card-tip p-3 shadow-sm my-5 bg-light-green border-light-green d-flex align-items-center justify-content-between">
     <div>
       <div class="card-tip-title">The Art Warehouse</div>
-      <div class="description">This is an offer you'll find in the art channel <span class="font-weight-bold">🦊art-mart</span>. It's a storage of donated art that you can request free art from every day. All you have to do is message the Art Dealers and they'll help you out!</div>
+      <div class="description">This is an offer you'll find in the art channel <span class="font-weight-bold">🦊art-mart</span>, check out the pins for more information. It's a storage of donated art that you can request free art from every day. All you have to do is message the Art Dealers and they'll help you out!</div>
     </div>
     <div>
       <%= image_tag "https://cdn.discordapp.com/emojis/728256719494447105.png?v=1", alt: "alttext", height: 45, class: "mx-3" %>
@@ -38,7 +38,7 @@
   <div class="card-tip p-3 shadow-sm my-5 bg-semi-green border-semi-green d-flex align-items-center justify-content-between">
     <div>
       <div class="card-tip-title">Optimize your flower breeding</div>
-      <div class="description">There's a dedicated channel just for optimizing your flower breeding, don't be scared to use it! We all want those blue roses, right?</div>
+      <div class="description">There's a dedicated channel just for optimizing your flower breeding, so check out the <span class="font-weight-bold">✨sparkle-station</span>. Don't be scared to use it, we all want those blue roses! Right?</div>
     </div>
     <div>
       <%= image_tag "https://cdn.discordapp.com/emojis/737328744309719142.png?v=1", alt: "alttext", height: 45, class: "mx-3" %>
@@ -48,24 +48,34 @@
   <div class="card-tip p-3 shadow-sm my-5 bg-light-blue border-light-blue d-flex align-items-center justify-content-between">
     <div>
       <div class="card-tip-title">Our bots make it easy and safe to host, use them!</div>
-      <div class="description">Don't be scared to use the queue bots on the server. They will make hosting much easier and best of all safer. Check out how and where to use our bots <%= link_to "here", bot_path(Bot.all.first), class: "bot-link p-1 px-2" %></div>
+      <div class="description">Don't be scared to use the queue bots on the server. They will make hosting much easier and best of all safer. Check out how and where to use our bots <%= link_to "here", bot_path(Bot.all.order("name").first), class: "bot-link p-1 px-2" %></div>
     </div>
     <div>
       <%= image_tag "https://cdn.discordapp.com/emojis/230105988211015680.png?v=1", alt: "alttext", height: 45, class: "mx-3" %>
     </div>
   </div>
 
-  <div class="card-tip p-3 shadow-sm my-5 bg-light-blue border-light-blue d-flex align-items-center justify-content-between">
+  <div class="card-tip p-3 pb-4 shadow-sm my-5 bg-light-green border-light-green d-flex align-items-center justify-content-between">
     <div>
       <div class="card-tip-title">Check the pins!</div>
-      <div class="description">Make sure to always check the pins in channels where you might not know what to do, there's a lot of information to find there!</div>
+      <div class="description mb-5">Make sure to always check the pins in channels where you might not know what to do, there's a lot of information to find there!</div>
+      <div class="d-flex align-items-center mb-5">
+        <%= image_tag "desktop-pin.png", alt: "desktop-pin", width: 100 %>
+        <div class="ml-3 pr-5"><span class="font-weight-bold">On desktop.</span> <br> Find the channel you want to check the pins on. Then click on the pin icon in the top right corner.</div>
+      </div>
+
+      <div class="d-flex align-items-center mb-2">
+        <%= image_tag "phone-pin1.png", alt: "desktop-pin", width: 100 %>
+        <div class="ml-3 pr-5"><span class="font-weight-bold">On phone.</span> <br> Find the channel you want to check the pins on. First click on the person icon in the top right corner. Then click on the pins tab to see the pins.</div>
+      </div>
+      <%= image_tag "phone-pin2.png", alt: "desktop-pin", height: 60 %>
     </div>
     <div>
-      <%= image_tag "https://discordapp.com/assets/83ef7fa5e050f0e8133709ad5d87fc90.svg", alt: "alttext", height: 45, class: "mx-3" %>
+      <%= image_tag "https://discordapp.com/assets/09204f6a96455580e749454b7449aa82.svg", alt: "alttext", height: 45, class: "mx-3" %>
     </div>
   </div>
 
-  <div class="card-tip p-3 shadow-sm my-5 bg-light-green border-light-green d-flex align-items-center justify-content-between">
+  <div class="card-tip p-3 shadow-sm my-5 bg-semi-blue border-semi-blue d-flex align-items-center justify-content-between">
     <div>
       <div class="card-tip-title">Open Island Weekends</div>
       <div class="description">Once a month a new section dedicated to hosting island tours and letting people explore islands opens up for everyone to use. This is the perfect opportunity to get inspired! Keep a eye out for upcoming dates in the announcements</div>
@@ -78,7 +88,7 @@
   <div class="card-tip p-3 shadow-sm my-5 bg-semi-green border-semi-green d-flex align-items-center justify-content-between">
     <div>
       <div class="card-tip-title">Ask the mod team anything!</div>
-      <div class="description">We're here to help! If there's anything you're in need of or don't know how to do, ask us!</div>
+      <div class="description">We're here to help! If there's anything you're in need of or don't know how to do, ask us! Just find an online mod on the sidebar to the right (either green circle, online. Or yellow moon, idle) and send them a direct message.</div>
     </div>
     <div>
       <%= image_tag "https://cdn.discordapp.com/emojis/727256534010298418.png?v=1", alt: "alttext", height: 45, class: "mx-3" %>

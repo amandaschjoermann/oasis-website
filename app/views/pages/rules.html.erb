@@ -1,14 +1,14 @@
-<div class="container home-wrapper pb-5">
+<div class="container home-wrapper pb-5 px-3 px-md-5">
   <div class="d-flex flex-column align-items-center justify-content-center mb-5">
     <h1 class="oasis-header text-center">ACNH The Oasis server rules</h1>
-    <p class="text-center">Please read these carefully to avoid any misunderstandings, if you have any questions, feel free to reach out to a mod! Don’t forget that is a safe, friendly, and collaborative environment for those who love Animal Crossing.
+    <p class="text-center">Please read these carefully to avoid any misunderstandings. If you have any questions, feel free to reach out to a mod! Don’t forget that server is a safe, friendly, and collaborative environment for those who love Animal Crossing.
     </p>
   </div>
 
 
   <% @rules.each do |info_hash| %>
-    <div class="d-flex align-items-center mb-5">
-      <div class="mr-4"><%= image_tag info_hash[:icon], alt: "alttext", height: 30 %></div>
+    <div class="d-flex flex-column flex-md-row align-items-center mb-5">
+      <div class="mr-4 mb-3 mb-md-0"><%= image_tag info_hash[:icon], alt: "alttext", height: 30 %></div>
       <div class="p-3 bg-white shadow-sm blue-border-rules"><u class="font-weight-bold"><%= info_hash[:title] %></u> <%= info_hash[:description] %></div>
     </div>
   <% end %>

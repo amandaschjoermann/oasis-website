@@ -1,4 +1,4 @@
-<div class="container home-wrapper pb-5">
+<div class="container home-wrapper pb-5 px-3 px-md-5">
   <div class="d-flex flex-column align-items-center justify-content-center mb-5">
     <h1 class="oasis-header text-center">Learn how to use our bots</h1>
     <p class="text-center">Learning to use our server bots isn't hard at all and it will make your life easier and more safe!</p>
@@ -29,7 +29,7 @@
       <div class="bot-title mr-4 mb-3">Where to use <%= @bot.name %>:</div>
       <div class="row px-0 px-md-5">
         <% @bot.channels.each do |channel| %>
-          <div class="col-12 <%= @bot.name == 'Clippy' ? 'col-md-3' : 'col-md-2' %>">
+          <div class="col-12 <%= @bot.name == 'Clippy' ? 'col-sm-6 col-md-4 col-lg-3' : 'col-md-3' %>">
             <%= link_to category_path(channel.category) do %>
               <div class="d-flex align-items-center bot-info px-3 shadow-sm py-1 mb-3">
                 <i class="fas fa-circle"></i>
@@ -46,17 +46,17 @@
     <div class="mx-2 mx-md-5 mb-5">
 
      <% if @bot.name == "Pascal" %>
-      <div class="font-weight-bold">Instructions</div>
+      <div class="font-weight-bold bot-sub-title">Instructions</div>
       <div class="mb-5">
         <div><%= @bot.name %> is really easy to use, just follow the template instructions below and you're good to go! Happy thanking 💚</div>
       </div>
     <% elsif @bot.name == "Tom Nook" %>
-      <div class="font-weight-bold">Instructions</div>
+      <div class="font-weight-bold bot-sub-title">Instructions</div>
       <div class="mb-5">
         <%= @bot.host.html_safe %>
       </div>
     <% elsif @bot.host.present? %>
-      <div class="font-weight-bold">How to host</div>
+      <div class="font-weight-bold bot-sub-title">How to host</div>
       <div class="mb-5">
         <%= @bot.host.html_safe %>
       </div>
@@ -78,15 +78,15 @@
     </div>
 
     <% if @bot.name == "Moistmaker" %>
-      <div class="font-weight-bold">How to help water</div>
+      <div class="font-weight-bold bot-sub-title">How to help water</div>
       <%= @bot.queue.html_safe %>
     <% elsif @bot.queue.present? %>
-      <div class="font-weight-bold">How to queue</div>
+      <div class="font-weight-bold bot-sub-title">How to visit</div>
       <%= @bot.queue.html_safe %>
     <% end %>
 
     <% if @bot.commands.present? %>
-      <div class="font-weight-bold mt-5">Other useful commands</div>
+      <div class="font-weight-bold mt-5 bot-sub-title">Other useful commands</div>
       <%= @bot.commands.html_safe %>
     <% end %>
    </div>

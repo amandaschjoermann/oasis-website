@@ -39,7 +39,7 @@
           <% end %>
         </div>
         <div class="px-3 d-none d-md-block">
-          <%= link_to bot_path(Bot.all.first) do %>
+          <%= link_to bot_path(Bot.all.order("name").first) do %>
             <div class="d-flex align-items-center">
               Bot guides
               <i class="fas fa-code-branch blue-icon ml-3"></i>
@@ -49,8 +49,24 @@
         <div class="px-3 d-none d-md-block">
           <%= link_to rules_path do %>
             <div class="d-flex align-items-center">
-              Server rules
+              Rules
               <i class="far fa-bookmark tan-icon ml-3"></i>
+            </div>
+          <% end %>
+        </div>
+        <div class="px-3 d-none d-md-block">
+          <%= link_to infographics_path do %>
+            <div class="d-flex align-items-center">
+              Infographics
+              <i class="fas fa-camera-retro tan-icon ml-3"></i>
+            </div>
+          <% end %>
+        </div>
+        <div class="px-3 d-none d-md-block">
+          <%= link_to spreadsheets_path do %>
+            <div class="d-flex align-items-center">
+              Useful links
+              <i class="fas fa-link tan-icon ml-3"></i>
             </div>
           <% end %>
         </div>
@@ -77,7 +93,7 @@
             </div>
 
             <div class="d-block d-md-none">
-              <%= link_to bot_path(Bot.all.first) do %>
+              <%= link_to bot_path(Bot.all.order("name").first) do %>
                 <div class="p-3 d-flex align-items-center justify-content-end green-border-bottom">
                   <div class="mr-3">Bot guides</div>
                   <i class="fas fa-code-branch blue-icon"></i>
@@ -94,19 +110,23 @@
               <% end %>
             </div>
 
-            <%= link_to spreadsheets_path do %>
-              <div class="p-3 d-flex align-items-center justify-content-end green-border-bottom">
-                <div class="mr-3">Useful links</div>
-                <i class="far fa-file-excel tan-icon"></i>
-              </div>
-            <% end %>
+            <div class="d-block d-md-none">
+              <%= link_to spreadsheets_path do %>
+                <div class="p-3 d-flex align-items-center justify-content-end green-border-bottom">
+                  <div class="mr-3">Useful links</div>
+                  <i class="fas fa-link tan-icon"></i>
+                </div>
+              <% end %>
+            </div>
 
-            <%= link_to infographics_path do %>
-              <div class="p-3 d-flex align-items-center justify-content-end green-border-bottom">
-                <div class="mr-3">Infographics</div>
-                <i class="far fa-file-image tan-icon"></i>
-              </div>
-            <% end %>
+            <div class="d-block d-md-none">
+              <%= link_to infographics_path do %>
+                <div class="p-3 d-flex align-items-center justify-content-end green-border-bottom">
+                  <div class="mr-3">Infographics</div>
+                  <i class="fas fa-camera-retro tan-icon"></i>
+                </div>
+              <% end %>
+            </div>
 
             <%= link_to destroy_user_session_path, method: :delete do %>
               <div class="p-3 d-flex align-items-center justify-content-end green-border-bottom">
