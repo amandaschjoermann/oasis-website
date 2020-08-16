@@ -103,6 +103,9 @@ Spreadsheet.create!(title: "Blue Rose Methods", url: "https://yuexr.github.io/ac
 Spreadsheet.create!(title: "Flower Breeding Simulator", url: "https://gardenscience.ac/", icon: "https://cdn.discordapp.com/emojis/727338709481029722.png?v=1", channel: landing)
 Spreadsheet.create!(title: "MeteoNook: Find Your Weather Seed", url: "https://wuffs.org/acnh/weather/", icon: "https://discordapp.com/assets/e63b6822e54d6334126831f99fbda142.svg", channel: landing)
 Spreadsheet.create!(title: "Turnip Prophet: Predict Your Turnip Price", url: "https://turnipprophet.io/", icon: "https://cdn.discordapp.com/emojis/727256317357719633.png?v=1", channel: landing)
+Spreadsheet.create!(title: "Island Evaluation: How To Get A 5 Star Island", url: "https://docs.google.com/document/d/1OnRivH5an-UaOkFTovWAiqbKJZvQPyCFZwxeyjYEps8/edit", icon: "https://discordapp.com/assets/141d49436743034a59dec6bd5618675d.svg", channel: landing)
+Spreadsheet.create!(title: "Statistics On Villager Hunts", url: "https://docs.google.com/spreadsheets/d/1uGfKFyQ1cViMBN_K64CrJ_Ivrtccpy2z8PhOQzKsJq8/edit#gid=0", icon: "https://discordapp.com/assets/0477c6a43026315dd623bc6367e18acb.svg", channel: landing)
+
 
 puts "Done creating spreadsheets"
 
