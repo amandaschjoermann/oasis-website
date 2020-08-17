@@ -8,7 +8,7 @@ class PagesController < ApplicationController
   end
 
   def no_member_zone
-    render layout: "login"
+    render layout: "devise"
   end
 
   def tips
