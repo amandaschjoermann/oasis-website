@@ -17,8 +17,12 @@ class User < ApplicationRecord
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       base_api = base_api = "https://discord.com/api"
       member = HTTParty.get(base_api + "/guilds/#{ENV['OASIS_ID']}/members/#{auth.uid}", headers: {"Authorization" => "Bot #{ENV['BOT_TOKEN']}"})
-      is_oasis_member = member['roles'].include?(ENV['TRAVELLER_ROLE_ID'])
-      is_mod = member['roles'].include?(ENV['MOD_ROLE_ID'])
+      if member['roles']
+        is_oasis_member = member['roles'].include?(ENV['TRAVELLER_ROLE_ID'])
+        is_mod = member['roles'].include?(ENV['MOD_ROLE_ID'])
+      else
+        return nil
+      end
       if member['message'] == "Unknown User"
         return nil
       else
