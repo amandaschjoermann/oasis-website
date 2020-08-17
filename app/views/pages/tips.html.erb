@@ -48,7 +48,14 @@
   <div class="card-tip p-3 shadow-sm my-5 bg-light-blue border-light-blue d-flex align-items-center justify-content-between">
     <div>
       <div class="card-tip-title">Our bots make it easy and safe to host, use them!</div>
-      <div class="description">Don't be scared to use the queue bots on the server. They will make hosting much easier and best of all safer. Check out how and where to use our bots <%= link_to "here", bot_path(Bot.all.order("name").first), class: "bot-link p-1 px-2" %></div>
+      <div class="description">Don't be scared to use the queue bots on the server. They will make hosting much easier and best of all safer.
+      <br><br>
+
+      Our queue bots each has a channel where you can use all the available commands for that specific bot. The output will be shown in the corresponding listings channel, it lists all active posts.
+
+      <br><br>
+
+      For more instructions on how to use the bots, check out this link: <%= link_to "how and where to use the bots", bot_path(Bot.all.order("name").first), class: "bot-link p-1 px-2" %></div>
     </div>
     <div>
       <%= image_tag "https://cdn.discordapp.com/emojis/230105988211015680.png?v=1", alt: "alttext", height: 45, class: "mx-3" %>
@@ -88,7 +95,7 @@
   <div class="card-tip p-3 shadow-sm my-5 bg-semi-green border-semi-green d-flex align-items-center justify-content-between">
     <div>
       <div class="card-tip-title">Ask the mod team anything!</div>
-      <div class="description">We're here to help! If there's anything you're in need of or don't know how to do, ask us! Just find an online mod on the sidebar to the right (either green circle, online. Or yellow moon, idle) and send them a direct message.</div>
+      <div class="description">We're here to help! If there's anything you're in need of or don't know how to do, ask us! Just find an online mod on the sidebar to the right (green circle, online: <span><%= image_tag "https://cdn.discordapp.com/emojis/464520569975603200.png?v=1", alt: "online-icon", height: 20 %></span> / yellow moon, idle: <span><%= image_tag "https://emoji.gg/assets/emoji/3929_idle.png", alt: "idle-icon", height: 15 %></span>) and send them a direct message.</div>
     </div>
     <div>
       <%= image_tag "https://cdn.discordapp.com/emojis/727256534010298418.png?v=1", alt: "alttext", height: 45, class: "mx-3" %>

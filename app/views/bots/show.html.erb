@@ -89,6 +89,13 @@
       <div class="font-weight-bold mt-5 bot-sub-title">Other useful commands</div>
       <%= @bot.commands.html_safe %>
     <% end %>
+
+    <% if @bot.name == "Moistmaker" %>
+      <div class="mt-5 d-flex align-items-center bot-sub-title">
+        <div class="mr-2 font-weight-bold">For a more detailed guide on how to use Moistmaker:</div>
+        <%= link_to "check out this link ✨", "https://docs.google.com/document/d/1uBAwKFWDAcAGnHApq9y32M8CpQ70k_gFLJ1UOc6nTbM/edit", target: "_blank", class: "spreadsheet-link" %>
+      </div>
+    <% end %>
    </div>
 
   </div>
