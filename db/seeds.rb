@@ -59,7 +59,7 @@ Channel.create!(name: "🌸 flower-market", description: "Trade and give away yo
 
 
 # Daily happenings section
-Channel.create!(name: "🏃 come-on-over", description: "Have people over to browse, visit your Able's, Nook's, give away items you don't need, ask for help with water. This is the channel to use when there's no other channel that fits the bill.", category: daily)
+Channel.create!(name: "🏃 come-on-over", description: "This is the channel to use when you want to host your island for an event that doesn't go in any of the other channels, or if you just want to host for one or a few people!", category: daily)
 Channel.create!(name: "📦 in-boxes", description: "Let people know if you have a villager in boxes or if there's a specific one you're looking for too. A lot of our members offer Amiibo help too, all you have to do is ask!", category: daily)
 guest = Channel.create!(name: "🌟 daily-guest", description: "This is the channel to use when you want to host a daily NPC villager, Celeste, Saharah, Kicks, Leif and your meteor showers. This channel is linked with #🌟❕guest-listings where you'll see the active posts. <br/><br/> 🌟 Please refrain from learning DIY's on islands. <br/> 🌟 Respect host's islands and don't pluck, pick or take without permission. <br/> 🌟 Kindly keep the Dodo Code to yourself. Ask the host nicely if you want somebody who isn't on the server to join.", category: daily)
 guest_listing = Channel.create!(name: "🌟❕ guest-listings", description: "This is where you'll see the active posts from #🌟daily-guest.", category: daily)
