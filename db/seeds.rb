@@ -105,6 +105,14 @@ Spreadsheet.create!(title: "MeteoNook: Find Your Weather Seed", url: "https://wu
 Spreadsheet.create!(title: "Turnip Prophet: Predict Your Turnip Price", url: "https://turnipprophet.io/", icon: "https://cdn.discordapp.com/emojis/727256317357719633.png?v=1", channel: landing)
 Spreadsheet.create!(title: "Island Evaluation: How To Get A 5 Star Island", url: "https://docs.google.com/document/d/1OnRivH5an-UaOkFTovWAiqbKJZvQPyCFZwxeyjYEps8/edit", icon: "https://discordapp.com/assets/141d49436743034a59dec6bd5618675d.svg", channel: landing)
 Spreadsheet.create!(title: "Statistics On Villager Hunts", url: "https://docs.google.com/spreadsheets/d/1uGfKFyQ1cViMBN_K64CrJ_Ivrtccpy2z8PhOQzKsJq8/edit#gid=0", icon: "https://discordapp.com/assets/0477c6a43026315dd623bc6367e18acb.svg", channel: landing)
+Spreadsheet.create!(title: "Online Island Designer", url: "https://eugeneration.github.io/HappyIslandDesigner/", icon: "https://discordapp.com/assets/88de0a41aeb09fc3b3d1258d1f94228d.svg", channel: landing)
+Spreadsheet.create!(title: "Catching Rare Fish", url: "https://docs.google.com/document/d/1B9pHtxxs6pi5SCNEPd7KiNsh4eZHOZUASHkEwgOmJIk/edit", icon: "https://cdn.discordapp.com/emojis/707346903272259695.png?v=1", channel: landing)
+Spreadsheet.create!(title: "AC is Love: Custom Designs", url: "https://acislove.com/", icon: "https://discordapp.com/assets/293579110f2137926e045941a942e8d4.svg", channel: landing)
+Spreadsheet.create!(title: "Season Calendar", url: "https://docs.google.com/spreadsheets/d/1bVR5ZvGnLocomSvbypDyY-3gX-2iKaCEtmlDUc6_4sI/edit#gid=2041508573", icon: "https://discordapp.com/assets/825059b38b542d878fe89814c61645c2.svg", channel: landing)
+Spreadsheet.create!(title: "Villager Furniture Replacement Guide", url: "https://docs.google.com/spreadsheets/d/1Iql5J5BXG-SuJvtw_duLZzjIw5myGcFnEL-I3BSR_CE/edit#gid=1080710934", icon: "https://discordapp.com/assets/052c2cb602f1fe2bafb5900b67cf236a.svg", channel: landing)
+Spreadsheet.create!(title: "Mystery Islands Guide", url: "http://wuffs.org/acnh/mysterytour.html", icon: "https://cdn.discordapp.com/emojis/727256427894276127.png?v=1", channel: landing)
+Spreadsheet.create!(title: "Lost Item Guide", url: "https://docs.google.com/spreadsheets/d/1dCaPo6N-9XDwOQYMmvv9R7HPqvXPGUF5B6frZs0fcms/edit#gid=0", icon: "https://cdn.nookazon.com/nookazon/icons/touch.png", channel: landing)
+Spreadsheet.create!(title: "Catch Guide: Everything Museum Related", url: "https://ac-catch.com/", icon: "https://cdn.discordapp.com/emojis/738259342670823475.png?v=1", channel: landing)
 
 
 puts "Done creating spreadsheets"
@@ -625,6 +633,129 @@ Infographic.create!(
   title: "Pearl Finding Tips",
   image_url: "https://cdn.discordapp.com/attachments/727901653390589954/731354836007911485/image0.jpg",
   tags: "pearls, bubbles, shadow size"
+)
+
+
+########################################################
+
+puts "Plant guide"
+
+Infographic.create!(
+  title: "Plant Guide: Trees (1 of 3)",
+  image_url: "https://bigfootmg.github.io/ACNH-Plant-Guide/02.png",
+  tags: "hardwood, fruit, cedar, trees, coconut, bamboo, money tree"
+)
+
+Infographic.create!(
+  title: "Plant Guide: Tree Growth (2 of 3)",
+  image_url: "https://bigfootmg.github.io/ACNH-Plant-Guide/03.png",
+  tags: "trees, growth, stunted trees, tree stages"
+)
+
+Infographic.create!(
+  title: "Plant Guide: Resources & Items (3 of 3)",
+  image_url: "https://bigfootmg.github.io/ACNH-Plant-Guide/04.png",
+  tags: "chopping trees, shaking trees, sticks, wasps, hardwood, fruit, cedar, trees, coconut, bamboo, money tree"
+)
+
+Infographic.create!(
+  title: "Plant Guide: Shrubs",
+  image_url: "https://bigfootmg.github.io/ACNH-Plant-Guide/05.png",
+  tags: "shrubs, bushes, camellia, hydrangea, azalea, hibiscus, tea olive, holly"
+)
+
+Infographic.create!(
+  title: "Plant Guide: Weeds",
+  image_url: "https://bigfootmg.github.io/ACNH-Plant-Guide/06.png",
+  tags: "weed, weeds, spreading, stages"
+)
+
+Infographic.create!(
+  title: "Plant Guide: Seasonal",
+  image_url: "https://bigfootmg.github.io/ACNH-Plant-Guide/07.png",
+  tags: "seasonal, trees, young spring bamboo, cherry blossom, pine cones, maple leaves, mushrooms"
+)
+
+########################################################
+
+puts "Missing infographics"
+
+Infographic.create!(
+  title: "Building Sizes",
+  image_url: "acnhbuildingsizes.png",
+  tags: "bridges, inclines, resident services, home, campsite, tailors, museum, shop"
+)
+
+Infographic.create!(
+  title: "Balloons",
+  image_url: "balloons.png",
+  tags: "balloons"
+)
+
+Infographic.create!(
+  title: "Breeding: From Seed To Sprout",
+  image_url: "breeding.png",
+  tags: "flowers, windflowers, cosmos, lily, lilies, pansy, pansies, mums, hyacinths, gold roses, lily of the valley, roses, tulips"
+)
+
+Infographic.create!(
+  title: "DAL Rewards",
+  image_url: "dal.png",
+  tags: "dal, loyalty program, branded gifts"
+)
+
+Infographic.create!(
+  title: "Expanded Pansies",
+  image_url: "expanded_pansies.png",
+  tags: "pansy, flowers, pansies"
+)
+
+Infographic.create!(
+  title: "Expanded Windflowers",
+  image_url: "expanded_windflowers.png",
+  tags: "windflowers, flowers"
+)
+
+Infographic.create!(
+  title: "Flower Genes: Mums & Roses",
+  image_url: "mumsroses.png",
+  tags: "mums, roses, genotypes"
+)
+
+Infographic.create!(
+  title: "All Flower Phenotypes",
+  image_url: "phenotype1.png",
+  tags: "genotypes, windflowers, cosmos, lily, lilies, pansy, pansies, mums, hyacinths, gold roses, lily of the valley, roses, tulips"
+)
+
+Infographic.create!(
+  title: "Pocket Camp Promotial Items",
+  image_url: "pocketcamp.png",
+  tags: "pocket camp"
+)
+
+Infographic.create!(
+  title: "Jolly Redd's Art Guide (1 of 2)",
+  image_url: "redd1.png",
+  tags: "redd, art, museum, paintings, statues, real, fake"
+)
+
+Infographic.create!(
+  title: "Jolly Redd's Art Guide (2 of 2)",
+  image_url: "redd2.png",
+  tags: "redd, art, museum, paintings, statues, real, fake"
+)
+
+Infographic.create!(
+  title: "Flower Reproduction Guide",
+  image_url: "reproduce.png",
+  tags: "cloning, breeding, flowers"
+)
+
+Infographic.create!(
+  title: "Tools & Their Durability",
+  image_url: "tools.png",
+  tags: "tools, shovel, axe, water can, slingshot, fishing rod, net"
 )
 
 puts "Done creating infographics"
