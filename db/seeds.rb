@@ -5,6 +5,7 @@ Bot.destroy_all
 Channel.destroy_all
 Category.destroy_all
 Spreadsheet.destroy_all
+User.destroy_all
 
 puts "All clean!"
 
