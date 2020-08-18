@@ -55,6 +55,10 @@
       <div class="mb-5">
         <%= @bot.host.html_safe %>
       </div>
+    <% elsif @bot.name == "Isabelle" %>
+      <div>
+        <%= @bot.host.html_safe %>
+      </div>
     <% elsif @bot.host.present? %>
       <div class="font-weight-bold bot-sub-title">How to host</div>
       <div class="mb-5">
@@ -63,18 +67,22 @@
     <% end %>
 
     <div class="row">
-      <div class="col-12 col-md-5">
-        <div class="font-weight-bold text-center mb-3">Template</div>
-        <div class="bot-template bot-example mb-5 p-5 w-100">
-          <%= @bot.template.html_safe %>
+      <% if @bot.template.present? %>
+        <div class="col-12 col-md-5">
+          <div class="font-weight-bold text-center mb-3">Template</div>
+          <div class="bot-template bot-example mb-5 p-5 w-100">
+            <%= @bot.template.html_safe %>
+          </div>
         </div>
-      </div>
-      <div class="col-12 col-md-5">
-        <div class="font-weight-bold text-center mb-3">Example</div>
-        <div class="bot-example mb-5 p-5 w-100">
-          <%= @bot.example.html_safe %>
+      <% end %>
+      <% if @bot.example.present? %>
+        <div class="col-12 col-md-5">
+          <div class="font-weight-bold text-center mb-3">Example</div>
+          <div class="bot-example mb-5 p-5 w-100">
+            <%= @bot.example.html_safe %>
+          </div>
         </div>
-      </div>
+      <% end %>
     </div>
 
     <% if @bot.name == "Moistmaker" %>

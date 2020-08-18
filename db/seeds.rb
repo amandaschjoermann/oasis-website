@@ -188,14 +188,25 @@ nooklings = Bot.create!(
   commands: "<span class='command'>i!boot <span class='person'>@person to remove</span></span> <br> If someone forgets to un-react the host can remove them manually from the queue."
 )
 
+# isabelle = Bot.create!(
+#   name: "Isabelle",
+#   avatar: "https://cdn.discordapp.com/attachments/728016357106384967/745251841767505990/I-hate-my-job.jpg",
+#   intro: "A bot used to announce that you're going on a villager hunt and for others to keep track on who's currently hunting.",
+#   host: "🐨 Use <span class='command'>i!find *villager / trait / species*</span> to start a hunt and announce who or what you're looking for. <br> 🐨 Use  <span class='command'>i!finish</span> when you're done with your hunt. <br> 🐨 You can check the pins of the <b>🔎villager-hunt</b> channel to see the current hunts. You can also use the command <span class='command'>i!open</span> to get a DM with who's currently hunting and what they're looking for. <br><br> Happy hunting 💚",
+#   queue: "",
+#   template: "i!find *villager / trait / species*",
+#   example: "i!find I'm looking for Raymond, Beardo or any cute frog!",
+#   commands: ""
+# )
+
 isabelle = Bot.create!(
   name: "Isabelle",
   avatar: "https://cdn.discordapp.com/attachments/728016357106384967/745251841767505990/I-hate-my-job.jpg",
   intro: "A bot used to announce that you're going on a villager hunt and for others to keep track on who's currently hunting.",
-  host: "🐨 Use <span class='command'>i!find *villager / trait / species*</span> to start a hunt and announce who or what you're looking for. <br> 🐨 Use  <span class='command'>i!finish</span> when you're done with your hunt. <br> 🐨 You can check the pins of the <b>🔎villager-hunt</b> channel to see the current hunts. You can also use the command <span class='command'>i!open</span> to get a DM with who's currently hunting and what they're looking for. <br><br> Happy hunting 💚",
+  host: "Coming soon! <br><br> Happy hunting 💚",
   queue: "",
-  template: "i!find *villager / trait / species*",
-  example: "i!find I'm looking for Raymond, Beardo or any cute frog!",
+  template: "",
+  example: "",
   commands: ""
 )
 
