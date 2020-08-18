@@ -783,5 +783,11 @@ Infographic.create!(
   tags: "tools, shovel, axe, water can, slingshot, fishing rod, net"
 )
 
+Infographic.create!(
+  title: "Sea Otter's Gifts",
+  image_url: "https://cdn.discordapp.com/attachments/727901653390589954/745364629437284382/pascal2.png",
+  tags: "pascal, rewards, pearls, mermaids"
+)
+
 puts "Done creating infographics"
 
