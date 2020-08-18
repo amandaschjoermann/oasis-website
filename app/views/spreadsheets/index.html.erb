@@ -4,8 +4,27 @@
     <p class="text-center">Spreadsheets and useful links made to help you optimize your Animal Crossing experience!</p>
   </div>
 
+  <p class="font-weight-bold">Helpful spreadsheets made by mods and members of the community:</p>
   <div class="row pb-5">
-    <% @spreadsheets.each do |spreadsheet| %>
+    <% @homemade_sheets.each do |spreadsheet| %>
+      <div class="col-12 col-md-6">
+        <div class="spreadsheet d-flex align-items-center my-2 my-md-4 bg-white p-3 px-4 shadow-sm">
+          <%= image_tag spreadsheet.icon, alt: "alttext", height: 30 %>
+          <div class="ml-4">
+            <div class="font-weight-bold"> <%= spreadsheet.title %> </div>
+            <%= link_to spreadsheet.url, target: "_blank", class: "spreadsheet-link" do %>
+              <div>link to <%= spreadsheet.title.downcase %></div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+
+  <p class="font-weight-bold">Helpful external links and spreadsheets:</p>
+  <div class="row pb-5">
+    <% @external_sheets.each do |spreadsheet| %>
       <div class="col-12 col-md-6">
         <div class="spreadsheet d-flex align-items-center my-2 my-md-4 bg-white p-3 px-4 shadow-sm">
           <%= image_tag spreadsheet.icon, alt: "alttext", height: 30 %>

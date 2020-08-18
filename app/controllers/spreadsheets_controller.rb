@@ -1,5 +1,5 @@
 class SpreadsheetsController < ApplicationController
   def index
-    @spreadsheets = Spreadsheet.all
+    @homemade_sheets, @external_sheets = Spreadsheet.all.group_by(&:channel).values
   end
 end

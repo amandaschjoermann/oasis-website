@@ -29,7 +29,7 @@ puts "Creating channels"
 
 # Welcome section
 landing = Channel.create!(name: "🌴 edge-of-the-oasis", description: "This is the first channel you'll see when joining The Oasis, answer a small quiz to get access to the whole server!", category: welcome)
-Channel.create!(name: "🛬 airport", description: "Get ready to welcome all the new people here!", category: welcome)
+homemade = Channel.create!(name: "🛬 airport", description: "Get ready to welcome all the new people here!", category: welcome)
 Channel.create!(name: "🔊 announcements", description: "This is where the team of moderators will post important updates to the server, make sure to always read the posts in this channel.", category: welcome)
 Channel.create!(name: "📖 rules", description: "In this channel you’ll find the server rules. It’s important to read those before using the server.", category: welcome)
 Channel.create!(name: "📮 suggestions-box", description: "Feedback, suggestions and everything you want the mods to know goes here.", category: welcome)
@@ -91,10 +91,10 @@ puts "Done creating channels"
 
 puts "Creating spreadsheets"
 
-Spreadsheet.create!(title: "Dream Codes", url: "https://docs.google.com/spreadsheets/d/1JZS3UtLjJpJvPYyqKCoHMDgM_iJklsQSJ4CGwYiWsbA/edit#gid=0", icon: "https://discordapp.com/assets/f341538d6092b98ba32c58ad45537267.svg", channel: landing)
-Spreadsheet.create!(title: "DIY Matchmaking", url: "https://docs.google.com/spreadsheets/d/1tsPJ7aWj0cgKaHHwve9GdTO--txhgsS7BpsPWi5Xl2o/edit#gid=1480786600", icon: "https://cdn.discordapp.com/emojis/727256338798870549.png?v=1", channel: landing)
-Spreadsheet.create!(title: "Catalogue Listing", url: "https://docs.google.com/spreadsheets/d/1uFXnB8az9IDoXYmjLLR9yI23eUb5aEc0ahMgIDqi7Bs/edit#gid=283475619", icon: "https://cdn.discordapp.com/emojis/727256481522516162.png?v=1", channel: landing)
-Spreadsheet.create!(title: "Requestable Warehouse Art", url: "https://docs.google.com/spreadsheets/d/1XbV7LyLABYdjsmLRV2OsiJnFSR273xmuwX42xyiqKPQ/edit#gid=0", icon: "https://cdn.discordapp.com/emojis/728256719494447105.png?v=1", channel: landing)
+Spreadsheet.create!(title: "Dream Codes", url: "https://docs.google.com/spreadsheets/d/1JZS3UtLjJpJvPYyqKCoHMDgM_iJklsQSJ4CGwYiWsbA/edit#gid=0", icon: "https://discordapp.com/assets/f341538d6092b98ba32c58ad45537267.svg", channel: homemade)
+Spreadsheet.create!(title: "DIY Matchmaking", url: "https://docs.google.com/spreadsheets/d/1tsPJ7aWj0cgKaHHwve9GdTO--txhgsS7BpsPWi5Xl2o/edit#gid=1480786600", icon: "https://cdn.discordapp.com/emojis/727256338798870549.png?v=1", channel: homemade)
+Spreadsheet.create!(title: "Catalogue Listing", url: "https://docs.google.com/spreadsheets/d/1uFXnB8az9IDoXYmjLLR9yI23eUb5aEc0ahMgIDqi7Bs/edit#gid=283475619", icon: "https://cdn.discordapp.com/emojis/727256481522516162.png?v=1", channel: homemade)
+Spreadsheet.create!(title: "Requestable Warehouse Art", url: "https://docs.google.com/spreadsheets/d/1XbV7LyLABYdjsmLRV2OsiJnFSR273xmuwX42xyiqKPQ/edit#gid=0", icon: "https://cdn.discordapp.com/emojis/728256719494447105.png?v=1", channel: homemade)
 Spreadsheet.create!(title: "Villager Compatibility Tool", url: "https://docs.google.com/spreadsheets/d/1Sc2HJRcgg-Q_CsFnewIB3n2f4Tgj-QT33qUCrItj0MU/edit#gid=773486971", icon: "https://discordapp.com/assets/01c80723fb8cbdcb9e22747cd88e07e4.svg", channel: landing)
 Spreadsheet.create!(title: "Time-Travel, Glitches & Datamine Masterpost", url: "https://docs.google.com/document/d/169F3cp2THB-9G74rSzAWEqDrVY3yBSHtkOhPiP-uf9A/edit?ts=5ec81591", icon: "https://discordapp.com/assets/c3b6bfe6efe3d61d1e9198fe347ca06c.svg", channel: landing)
 Spreadsheet.create!(title: "Villagers, House Exteriors & Interiors", url: "https://docs.google.com/spreadsheets/d/1QrLaxUqxa56ncaoBVR7IbPfx1nShoMd81Odm0BgXTd4/edit#gid=0", icon: "https://cdn.discordapp.com/emojis/707365923555770408.png?v=1", channel: landing)
@@ -104,7 +104,7 @@ Spreadsheet.create!(title: "Flower Breeding Simulator", url: "https://gardenscie
 Spreadsheet.create!(title: "MeteoNook: Find Your Weather Seed", url: "https://wuffs.org/acnh/weather/", icon: "https://discordapp.com/assets/e63b6822e54d6334126831f99fbda142.svg", channel: landing)
 Spreadsheet.create!(title: "Turnip Prophet: Predict Your Turnip Price", url: "https://turnipprophet.io/", icon: "https://cdn.discordapp.com/emojis/727256317357719633.png?v=1", channel: landing)
 Spreadsheet.create!(title: "Island Evaluation: How To Get A 5 Star Island", url: "https://docs.google.com/document/d/1OnRivH5an-UaOkFTovWAiqbKJZvQPyCFZwxeyjYEps8/edit", icon: "https://discordapp.com/assets/141d49436743034a59dec6bd5618675d.svg", channel: landing)
-Spreadsheet.create!(title: "Statistics On Villager Hunts", url: "https://docs.google.com/spreadsheets/d/1uGfKFyQ1cViMBN_K64CrJ_Ivrtccpy2z8PhOQzKsJq8/edit#gid=0", icon: "https://discordapp.com/assets/0477c6a43026315dd623bc6367e18acb.svg", channel: landing)
+Spreadsheet.create!(title: "Statistics On Villager Hunts", url: "https://docs.google.com/spreadsheets/d/1uGfKFyQ1cViMBN_K64CrJ_Ivrtccpy2z8PhOQzKsJq8/edit#gid=0", icon: "https://discordapp.com/assets/0477c6a43026315dd623bc6367e18acb.svg", channel: homemade)
 Spreadsheet.create!(title: "Online Island Designer", url: "https://eugeneration.github.io/HappyIslandDesigner/", icon: "https://discordapp.com/assets/88de0a41aeb09fc3b3d1258d1f94228d.svg", channel: landing)
 Spreadsheet.create!(title: "Catching Rare Fish", url: "https://docs.google.com/document/d/1B9pHtxxs6pi5SCNEPd7KiNsh4eZHOZUASHkEwgOmJIk/edit", icon: "https://cdn.discordapp.com/emojis/707346903272259695.png?v=1", channel: landing)
 Spreadsheet.create!(title: "AC is Love: Custom Designs", url: "https://acislove.com/", icon: "https://discordapp.com/assets/293579110f2137926e045941a942e8d4.svg", channel: landing)
@@ -113,6 +113,7 @@ Spreadsheet.create!(title: "Villager Furniture Replacement Guide", url: "https:/
 Spreadsheet.create!(title: "Mystery Islands Guide", url: "http://wuffs.org/acnh/mysterytour.html", icon: "https://cdn.discordapp.com/emojis/727256427894276127.png?v=1", channel: landing)
 Spreadsheet.create!(title: "Lost Item Guide", url: "https://docs.google.com/spreadsheets/d/1dCaPo6N-9XDwOQYMmvv9R7HPqvXPGUF5B6frZs0fcms/edit#gid=0", icon: "https://cdn.nookazon.com/nookazon/icons/touch.png", channel: landing)
 Spreadsheet.create!(title: "Catch Guide: Everything Museum Related", url: "https://ac-catch.com/", icon: "https://cdn.discordapp.com/emojis/738259342670823475.png?v=1", channel: landing)
+Spreadsheet.create!(title: "ACNH Comprehensive Data", url: "https://docs.google.com/spreadsheets/d/13d_LAJPlxMa_DubPTuirkIV4DERBMXbrWQsmSh8ReK4/edit#gid=93332535", icon: "https://discordapp.com/assets/331da3cdba2b7b84a5acd7a1f304a3bd.svg", channel: landing)
 
 
 puts "Done creating spreadsheets"
