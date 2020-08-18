@@ -39,7 +39,7 @@ Channel.create!(name: "🐪 the-desert", description: "This is where you'll end 
 
 # ACNH general section
 Channel.create!(name: "🍃 acnh-chit-chat", description: "Discuss anything ACNH related here. Ask questions, help your buddies and get friends.", category: general)
-Channel.create!(name: "🔎 villager-hunt", description: "Going on an island hunt for villagers? Wanna spectate another member's hunt? This channel's for you! <br><br> 👀 Go to the #👥role-selection channel for the Spectators role if you want to be pinged whenever a hunt is going on. <br> 👀 If you want people to keep you company during your hunt, just ping the <span class='person'>@Spectators</span>.", category: general)
+hunt = Channel.create!(name: "🔎 villager-hunt", description: "Going on an island hunt for villagers? Wanna spectate another member's hunt? This channel's for you! <br><br> 👀 Go to the #👥role-selection channel for the Spectators role if you want to be pinged whenever a hunt is going on. <br> 👀 If you want people to keep you company during your hunt, just ping the <span class='person'>@Spectators</span>.", category: general)
 Channel.create!(name: "📸 island-exhibition", description: "If you're proud of something on your island, or even your whole island, and you want to show it to the world this is the place to do it! You can also use this channel to find inspiration and ask for opinions on your current work.", category: general)
 Channel.create!(name: "🎨 ables-corner", description: "The place to post your custom designs and get help to find the perfect pattern that you might be looking for! There's some real custom design wizards on our server, so don't be shy to ask for help!", category: general)
 Channel.create!(name: "🧤 ask-a-gardener", description: "Breeding, cloning, all the different flower genotypes, layouts and so much more. It can be difficult to navigate the huge amount of flower information sometimes, so this is the place to ask for help!", category: general)
@@ -188,6 +188,17 @@ nooklings = Bot.create!(
   commands: "<span class='command'>i!boot <span class='person'>@person to remove</span></span> <br> If someone forgets to un-react the host can remove them manually from the queue."
 )
 
+isabelle = Bot.create!(
+  name: "Isabelle",
+  avatar: "https://cdn.discordapp.com/attachments/728016357106384967/745251841767505990/I-hate-my-job.jpg",
+  intro: "A bot used to announce that you're going on a villager hunt and for others to keep track on who's currently hunting.",
+  host: "🐨 Use <span class='command'>i!find *villager / trait / species*</span> to start a hunt and announce who or what you're looking for. <br> 🐨 Use  <span class='command'>i!finish</span> when you're done with your hunt. <br> 🐨 You can check the pins of the <b>🔎villager-hunt</b> channel to see the current hunts. You can also use the command <span class='command'>i!open</span> to get a DM with who's currently hunting and what they're looking for. <br><br> Happy hunting 💚",
+  queue: "",
+  template: "i!find *villager / trait / species*",
+  example: "i!find I'm looking for Raymond, Beardo or any cute frog!",
+  commands: ""
+)
+
 puts "Done creating bots"
 
 ########################################################
@@ -218,6 +229,8 @@ BotChannel.create!(bot: clippy, channel: island_listing)
 BotChannel.create!(bot: moistmaker, channel: water)
 
 BotChannel.create!(bot: pascal, channel: thank)
+
+BotChannel.create!(bot: isabelle, channel: hunt)
 
 puts "Done linking bots to channels"
 
