@@ -113,7 +113,7 @@ Spreadsheet.create!(title: "Villager Furniture Replacement Guide", url: "https:/
 Spreadsheet.create!(title: "Mystery Islands Guide", url: "http://wuffs.org/acnh/mysterytour.html", icon: "https://cdn.discordapp.com/emojis/727256427894276127.png?v=1", channel: landing)
 Spreadsheet.create!(title: "Lost Item Guide", url: "https://docs.google.com/spreadsheets/d/1dCaPo6N-9XDwOQYMmvv9R7HPqvXPGUF5B6frZs0fcms/edit#gid=0", icon: "https://cdn.nookazon.com/nookazon/icons/touch.png", channel: landing)
 Spreadsheet.create!(title: "Catch Guide: Everything Museum Related", url: "https://ac-catch.com/", icon: "https://cdn.discordapp.com/emojis/738259342670823475.png?v=1", channel: landing)
-Spreadsheet.create!(title: "ACNH Comprehensive Data", url: "https://docs.google.com/spreadsheets/d/13d_LAJPlxMa_DubPTuirkIV4DERBMXbrWQsmSh8ReK4/edit#gid=93332535", icon: "https://discordapp.com/assets/331da3cdba2b7b84a5acd7a1f304a3bd.svg", channel: landing)
+Spreadsheet.create!(title: "ACNH Comprehensive Data", url: "https://docs.google.com/spreadsheets/d/13d_LAJPlxMa_DubPTuirkIV4DERBMXbrWQsmSh8ReK4/edit#gid=93332535", icon: "https://discordapp.com/assets/3391ce4715f3c814d6067911438e5bf7.svg", channel: landing)
 
 
 puts "Done creating spreadsheets"
