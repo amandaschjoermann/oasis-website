@@ -201,7 +201,7 @@ nooklings = Bot.create!(
 
 isabelle = Bot.create!(
   name: "Isabelle",
-  avatar: "https://cdn.discordapp.com/attachments/728016357106384967/745251841767505990/I-hate-my-job.jpg",
+  avatar: "https://cdn.discordapp.com/attachments/723223835511357450/745328506841596016/sza.png",
   intro: "A bot used to announce that you're going on a villager hunt and for others to keep track on who's currently hunting.",
   host: "Coming soon! <br><br> Happy hunting 💚",
   queue: "",
@@ -241,7 +241,7 @@ BotChannel.create!(bot: moistmaker, channel: water)
 
 BotChannel.create!(bot: pascal, channel: thank)
 
-BotChannel.create!(bot: isabelle, channel: hunt)
+# BotChannel.create!(bot: isabelle, channel: hunt)
 
 puts "Done linking bots to channels"
 
