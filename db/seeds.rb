@@ -468,19 +468,19 @@ Infographic.create!(
 )
 
 Infographic.create!(
-  title: "Repoting Dreams",
+  title: "Reporting Dreams",
   image_url: "https://yuexr.github.io/img/dreamreport1.png",
   tags: "dream code, dreams, report"
 )
 
 Infographic.create!(
-  title: "Repoting Dreams FAQ I",
+  title: "Reporting Dreams FAQ I",
   image_url: "https://yuexr.github.io/img/dreamreport_faq1.png",
   tags: "dream code, dreams, report"
 )
 
 Infographic.create!(
-  title: "Repoting Dreams FAQ II",
+  title: "Reporting Dreams FAQ II",
   image_url: "https://yuexr.github.io/img/dreamreport_faq2.png",
   tags: "dream code, dreams, report"
 )
