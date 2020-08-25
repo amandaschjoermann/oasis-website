@@ -159,6 +159,33 @@ AcEvent.create!(
   to_date: Date.new(2020, 10, 10)
 )
 
+AcEvent.create!(
+  title: "Cowboy Festival",
+  description: "Nook Shopping Event: Rodeo-Style Springy Ride-On available.",
+  season: "Both",
+  event_icon: "https://discordapp.com/assets/591183f3386ef43f266bd7bcf03ef83f.svg",
+  from_date: Date.new(2020, 8, 1),
+  to_date: Date.new(2020, 8, 31)
+)
+
+AcEvent.create!(
+  title: "Cowherd & Weaver Girl Day",
+  description: "Nook Shopping Event: Hikoboshi outfit and Orihime outfit available.",
+  season: "Both",
+  event_icon: "https://discordapp.com/assets/986297ec6e17beaccac69da14de35c68.svg",
+  from_date: Date.new(2020, 8, 1),
+  to_date: Date.new(2020, 8, 31)
+)
+
+AcEvent.create!(
+  title: "Grape Harvest Festival",
+  description: "Nook Shopping Event: Grape-Harvest Basket available.",
+  season: "Both",
+  event_icon: "https://discordapp.com/assets/40e0130a4411323cdbed71b01ee0268e.svg",
+  from_date: Date.new(2020, 9, 1),
+  to_date: Date.new(2020, 9, 30)
+)
+
 puts "Done creating events"
 
 ########################################################

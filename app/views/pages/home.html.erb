@@ -66,7 +66,7 @@
                 <div class="ml-3 w-100">
                   <div class="d-flex align-items-center justify-content-between">
                     <div class="font-weight-bold mr-2"><%= ac_event.title %></div>
-                    <div class="date">ends <%= ac_event.from_date.strftime("%A, %b %d") %></div>
+                    <div class="date">ends <%= ac_event.to_date.strftime("%A, %b %d") %></div>
                   </div>
                   <div class="season">Hemisphere: <span class="font-weight-bold"><%= ac_event.season %></span></div>
                   <div class="description"><%= ac_event.description %></div>
