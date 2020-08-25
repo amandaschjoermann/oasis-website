@@ -758,13 +758,13 @@ Infographic.create!(
 
 Infographic.create!(
   title: "Jolly Redd's Art Guide (1 of 2)",
-  image_url: "redd1.png",
+  image_url: "https://yuexr.github.io/img/redd1.png",
   tags: "redd, art, museum, paintings, statues, real, fake"
 )
 
 Infographic.create!(
   title: "Jolly Redd's Art Guide (2 of 2)",
-  image_url: "redd2.png",
+  image_url: "https://yuexr.github.io/img/redd2.png",
   tags: "redd, art, museum, paintings, statues, real, fake"
 )
 
@@ -782,7 +782,7 @@ Infographic.create!(
 
 Infographic.create!(
   title: "Sea Otter's Gifts",
-  image_url: "https://cdn.discordapp.com/attachments/727901653390589954/745364629437284382/pascal2.png",
+  image_url: "https://yuexr.github.io/img/pascal2.png",
   tags: "pascal, rewards, pearls, mermaids"
 )
 
