@@ -120,6 +120,14 @@ puts "Done creating spreadsheets"
 
 ########################################################
 
+puts "Creating events"
+
+
+
+puts "Done creating events"
+
+########################################################
+
 puts "Creating bots"
 
 redd = Bot.create!(
@@ -720,13 +728,13 @@ Infographic.create!(
 
 Infographic.create!(
   title: "Expanded Pansies",
-  image_url: "expanded_pansies.png",
+  image_url: "https://cestislife.github.io/img/expanded_pansies.png",
   tags: "pansy, flowers, pansies"
 )
 
 Infographic.create!(
   title: "Expanded Windflowers",
-  image_url: "expanded_windflowers.png",
+  image_url: "https://cestislife.github.io/img/expanded_windflowers.png",
   tags: "windflowers, flowers"
 )
 
