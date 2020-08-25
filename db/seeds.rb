@@ -133,33 +133,6 @@ AcEvent.create!(
 )
 
 AcEvent.create!(
-  title: "Bug Off",
-  description: "This event runs from 9AM until 6PM.",
-  season: "Northern",
-  event_icon: "https://cdn.discordapp.com/emojis/729763363000680478.png?v=1",
-  from_date: Date.new(2020, 9, 26),
-  to_date: Date.new(2020, 9, 26)
-)
-
-AcEvent.create!(
-  title: "Cherry Blossom Season",
-  description: "Catch cherry-blossom petals and obtain the special cherry-blossom DIYs during this event.",
-  season: "Southern",
-  event_icon: "https://vignette.wikia.nocookie.net/animalcrossing/images/2/23/NH-cherry-blossom_petal-icon.png/revision/latest?cb=20200414012614",
-  from_date: Date.new(2020, 10, 1),
-  to_date: Date.new(2020, 10, 10)
-)
-
-AcEvent.create!(
-  title: "Fishing Tournament",
-  description: "This event runs from 9AM until 6PM.",
-  season: "Both",
-  event_icon: "https://cdn.discordapp.com/emojis/707346903272259695.png?v=1",
-  from_date: Date.new(2020, 10, 10),
-  to_date: Date.new(2020, 10, 10)
-)
-
-AcEvent.create!(
   title: "Cowboy Festival",
   description: "Nook Shopping Event: Rodeo-Style Springy Ride-On available.",
   season: "Both",
@@ -178,6 +151,15 @@ AcEvent.create!(
 )
 
 AcEvent.create!(
+  title: "Moon-viewing Day",
+  description: "Nook Shopping Event: Moon rug available.",
+  season: "Both",
+  event_icon: "https://discordapp.com/assets/fccc6b7583e67ffbe59b5ff17bb220f3.svg",
+  from_date: Date.new(2020, 9, 7),
+  to_date: Date.new(2020, 10, 8)
+)
+
+AcEvent.create!(
   title: "Grape Harvest Festival",
   description: "Nook Shopping Event: Grape-Harvest Basket available.",
   season: "Both",
@@ -185,6 +167,79 @@ AcEvent.create!(
   from_date: Date.new(2020, 9, 1),
   to_date: Date.new(2020, 9, 30)
 )
+
+AcEvent.create!(
+  title: "Bug Off",
+  description: "This event runs from 9AM until 6PM.",
+  season: "Northern",
+  event_icon: "https://cdn.discordapp.com/emojis/729763363000680478.png?v=1",
+  from_date: Date.new(2020, 9, 26),
+  to_date: Date.new(2020, 9, 26)
+)
+
+AcEvent.create!(
+  title: "Cherry Blossom Season",
+  description: "Catch cherry-blossom petals and obtain the special Cherry-blossom DIYs during this event.",
+  season: "Southern",
+  event_icon: "https://vignette.wikia.nocookie.net/animalcrossing/images/2/23/NH-cherry-blossom_petal-icon.png/revision/latest?cb=20200414012614",
+  from_date: Date.new(2020, 10, 1),
+  to_date: Date.new(2020, 10, 10)
+)
+
+AcEvent.create!(
+  title: "Fishing Tournament",
+  description: "This event runs from 9AM until 6PM.",
+  season: "Both",
+  event_icon: "https://cdn.discordapp.com/emojis/707346903272259695.png?v=1",
+  from_date: Date.new(2020, 10, 10),
+  to_date: Date.new(2020, 10, 10)
+)
+
+AcEvent.create!(
+  title: "Mushrooming Season",
+  description: "Collect mushrooms and obtain the special Mush DIYs during this event.",
+  season: "Northern",
+  event_icon: "https://cdn.discordapp.com/emojis/707347186190516274.png?v=1",
+  from_date: Date.new(2020, 11, 1),
+  to_date: Date.new(2020, 11, 30)
+)
+
+AcEvent.create!(
+  title: "Bug Off",
+  description: "This event runs from 9AM until 6PM.",
+  season: "Southern",
+  event_icon: "https://cdn.discordapp.com/emojis/729763363000680478.png?v=1",
+  from_date: Date.new(2020, 11, 21),
+  to_date: Date.new(2020, 11, 21)
+)
+
+AcEvent.create!(
+  title: "Bug Off",
+  description: "This event runs from 9AM until 6PM.",
+  season: "Southern",
+  event_icon: "https://cdn.discordapp.com/emojis/729763363000680478.png?v=1",
+  from_date: Date.new(2020, 12, 19),
+  to_date: Date.new(2020, 12, 19)
+)
+
+AcEvent.create!(
+  title: "New Year's Eve",
+  description: "Celebrate NYE with your friends and villager buddies. Event starts at 11PM.",
+  season: "Both",
+  event_icon: "https://discordapp.com/assets/ae5e2a35c59da2f4e12c406f5efa86b9.svg",
+  from_date: Date.new(2020, 12, 31),
+  to_date: Date.new(2020, 12, 31)
+)
+
+AcEvent.create!(
+  title: "Festive Season",
+  description: "Collect ornaments and obtain the special Festive DIYs during this event.",
+  season: "Both",
+  event_icon: "https://discordapp.com/assets/2f5331445a4647af2bb317862b38502a.svg",
+  from_date: Date.new(2020, 12, 15),
+  to_date: Date.new(2021, 1, 6)
+)
+
 
 puts "Done creating events"
 
