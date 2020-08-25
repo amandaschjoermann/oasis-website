@@ -5,6 +5,7 @@ Bot.destroy_all
 Channel.destroy_all
 Category.destroy_all
 Spreadsheet.destroy_all
+AcEvent.destroy_all
 
 puts "All clean!"
 
@@ -122,7 +123,41 @@ puts "Done creating spreadsheets"
 
 puts "Creating events"
 
+AcEvent.create!(
+  title: "Open Island Weekend",
+  description: "Host island tours, mini games, treasure hunts and let people explore islands! Only the sky is the limit!",
+  season: "Both",
+  event_icon: "https://discordapp.com/assets/0b52d41ab11b969765213113b0d197c9.svg",
+  from_date: Date.new(2020, 9, 5),
+  to_date: Date.new(2020, 9, 6)
+)
 
+AcEvent.create!(
+  title: "Bug Off",
+  description: "This event runs from 9AM until 6PM.",
+  season: "Northern",
+  event_icon: "https://cdn.discordapp.com/emojis/729763363000680478.png?v=1",
+  from_date: Date.new(2020, 9, 26),
+  to_date: Date.new(2020, 9, 26)
+)
+
+AcEvent.create!(
+  title: "Cherry Blossom Season",
+  description: "Catch cherry-blossom petals and obtain the special cherry-blossom DIYs during this event.",
+  season: "Southern",
+  event_icon: "https://vignette.wikia.nocookie.net/animalcrossing/images/2/23/NH-cherry-blossom_petal-icon.png/revision/latest?cb=20200414012614",
+  from_date: Date.new(2020, 10, 1),
+  to_date: Date.new(2020, 10, 10)
+)
+
+AcEvent.create!(
+  title: "Fishing Tournament",
+  description: "This event runs from 9AM until 6PM.",
+  season: "Both",
+  event_icon: "https://cdn.discordapp.com/emojis/707346903272259695.png?v=1",
+  from_date: Date.new(2020, 10, 10),
+  to_date: Date.new(2020, 10, 10)
+)
 
 puts "Done creating events"
 

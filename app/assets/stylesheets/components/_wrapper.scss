@@ -64,3 +64,31 @@ input.search {
     box-shadow: inset 0 0px 0px rgba(0,0,0,.075), 0 0 0px rgba(102, 175, 233, 0.6);
   }
 }
+
+.event-notice {
+  font-size: 14px;
+}
+
+.event-card {
+  border: 2px solid #d5e8e0;
+  position: relative;
+  .description {
+    font-size: 12px;
+  }
+  .season {
+    font-size: 12px;
+  }
+  &.active {
+    background-color: #e1f2ea;
+  }
+  .date-info {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-size: 12px;
+  }
+  .date {
+    font-size: 12px;
+    border-bottom: 2px solid #9abfae;
+  }
+}

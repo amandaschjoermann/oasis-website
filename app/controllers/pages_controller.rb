@@ -1,6 +1,8 @@
 class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:no_member_zone]
   def home
+    @current_events = AcEvent.all.select(&:current_event)
+    @upcoming_events = AcEvent.all.select(&:upcoming_event).sort_by(&:from_date)
   end
 
   def login
