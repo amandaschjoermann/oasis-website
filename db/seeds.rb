@@ -114,7 +114,7 @@ Spreadsheet.create!(title: "Mystery Islands Guide", url: "http://wuffs.org/acnh/
 Spreadsheet.create!(title: "Lost Item Guide", url: "https://docs.google.com/spreadsheets/d/1dCaPo6N-9XDwOQYMmvv9R7HPqvXPGUF5B6frZs0fcms/edit#gid=0", icon: "https://cdn.nookazon.com/nookazon/icons/touch.png", channel: landing)
 Spreadsheet.create!(title: "Catch Guide: Everything Museum Related", url: "https://ac-catch.com/", icon: "https://cdn.discordapp.com/emojis/738259342670823475.png?v=1", channel: landing)
 Spreadsheet.create!(title: "ACNH Comprehensive Data", url: "https://docs.google.com/spreadsheets/d/13d_LAJPlxMa_DubPTuirkIV4DERBMXbrWQsmSh8ReK4/edit#gid=93332535", icon: "https://discordapp.com/assets/3391ce4715f3c814d6067911438e5bf7.svg", channel: landing)
-
+Spreadsheet.create!(title: "Campsite Guide", url: "https://docs.google.com/document/d/1c8rsKWWtwsOo_JOxwO-lVRx2MUhc-bcdZg1mhXgtRPg/edit", icon: "https://discordapp.com/assets/2f87e5640674dc70c9eafec452c12744.svg", channel: landing)
 
 puts "Done creating spreadsheets"
 
@@ -126,7 +126,7 @@ redd = Bot.create!(
   name: "Redd",
   avatar: "https://cdn.discordapp.com/attachments/726075201397325854/727888659033882705/Bot_Redd_HeadOnly_Transparent.png",
   intro: "An art bot made to make hosting your Redd visits and art giveaways easy and safe!",
-  host: "🦊 Use <span class='command'>i!new</span> followed by the template below to create a new post. <br> 🦊 Use <span class='command'>i!queue dodo_code</span>, where dodo_code is your dodo code, Redd will DM that to the buyers when they join the queue. Use the same command again to your dodo code, Redd will once again DM the new dodo code to everyone in queue. <br> 🦊 Use <span class='command'>i!delete</span> when you’re done hosting to delete your post.",
+  host: "🦊 Use <span class='command'>i!new</span> followed by the template below to create a new post. <br> 🦊 Then in a seperate message use <span class='command'>i!queue dodo_code</span>, where dodo_code is your dodo code, Redd will DM that to the buyers when they join the queue. Use the same command again to your dodo code, Redd will once again DM the new dodo code to everyone in queue. <br> 🦊 Use <span class='command'>i!delete</span> when you’re done hosting to delete your post.",
   queue: "🦊 To join a queue simply tap the emoji number on the post 1️⃣, 2️⃣, 3️⃣ or 4️⃣ to claim the art piece responding to that number. If you were fast enough to get it, Redd will DM you the dodo code and you’re good to go. <br> 🦊 When you’ve bought or collected your piece of art, use the command <span class='command'>I!buy</span> to update the queue and mark your claimed art piece as bought. No need to do more than that!",
   template: "i!new <br> Redd Alert!!! <br> Need ladder: <br> Shops: <br> Water: <br> Other: <br> Items: <br> 1. *name_of_art_piece* (real/fake) <br> 2. *name_of_art_piece* (real/fake) <br> 3. *name_of_art_piece* (real/fake) <br> 4. *name_of_art_piece* (real/fake)",
   example: "i!new <br> Redd is here, wooo!!! <br> Shops: Sure, limited items as well <br> Water: No thanks, all golden <br> Other: I'll be afk, ping me if there's any issues <br> Items: <br> 1. Valiant statue (real) <br> 2. Motherly statue (fake) <br> 3. Calm painting (real)",
@@ -148,7 +148,7 @@ clippy = Bot.create!(
   name: "Clippy",
   avatar: "https://cdn.discordapp.com/attachments/709008918575185961/730798938264829962/Clippy.png",
   intro: "A queue bot made to make hosting and visiting islands easy and safe. Clippy is used to host turnip prices, meteor showers, NPC visits and villagers crafting DIYs.",
-  host: "🖇 Use <span class='command'>n!new</span> followed by the template below to create a new post. <br> 🖇 Use <span class='command'>n!queue dodo_code queue_size</span> where dodo_code is your dodo code and queue size is the amount of people you want to visit at the same time, 3 is the default but for busy queues we recommend adjusting that to 2 people at a time. Clippy will DM the dodo code to anyone who joins the queue who are also within your set queue size. Use the same command again to update your dodo code. Clippy will once again DM the new dodo code to everyone in queue. <br> 🖇 Use <span class='command'>n!close</span> if you want to close the queue to avoid more people joining. <br> 🖇 Use <span class='command'>n!delete</span> when you’re done hosting to delete your post. <br><br> 💰 If you're hosting a good turnip price, we recommend mentioning that multiple trips are allowed but that people should re-queue to make space for everyone. <br> 🌟 Remember to adjust the visitor timeout if you're hosting a meteor shower since it can take more than 20 minutes per visitor.",
+  host: "🖇 Use <span class='command'>n!new</span> followed by the template below to create a new post. <br> 🖇 Then in a seperate message use <span class='command'>n!queue dodo_code queue_size</span> where dodo_code is your dodo code and queue size is the amount of people you want to visit at the same time, 3 is the default but for busy queues we recommend adjusting that to 2 people at a time. Clippy will DM the dodo code to anyone who joins the queue who are also within your set queue size. Use the same command again to update your dodo code. Clippy will once again DM the new dodo code to everyone in queue. <br> 🖇 Use <span class='command'>n!close</span> if you want to close the queue to avoid more people joining. <br> 🖇 Use <span class='command'>n!delete</span> when you’re done hosting to delete your post. <br><br> 💰 If you're hosting a good turnip price, we recommend mentioning that multiple trips are allowed but that people should re-queue to make space for everyone. <br> 🌟 Remember to adjust the visitor timeout if you're hosting a meteor shower since it can take more than 20 minutes per visitor.",
   queue: "🖇 To join a queue simply tap the airplane emoji in the matching listing channel ✈️, which will put you in line. When it's your turn, Clippy will DM you the dodo code and you’re good to go. <br> 🖇 When you've finished your visit make sure to un-react on the airplane emoji ✈️ to make space for the next one in line!",
   template: "Depending on what you're hosting<br><br>n!new <br> Visitor / DIY recipe / Price: <br> Location: <br> Code: (Don't include this if using a queue, which we recommend) <br> Shops: <br> Need Watering: <br> Other:",
   example: "Imagine I'm hosting Celeste<br><br>n!new <br> Visitor: Star birb Celeste is here <br> Location: Trapped left of airport <br> Code: Queue <br> Shops: All closed <br> Need Watering: No thanks, all golden <br> Other: Please take some free DIYs right side of airport.",
@@ -188,25 +188,14 @@ nooklings = Bot.create!(
   commands: "<span class='command'>i!boot <span class='person'>@person to remove</span></span> <br> If someone forgets to un-react the host can remove them manually from the queue."
 )
 
-# isabelle = Bot.create!(
-#   name: "Isabelle",
-#   avatar: "https://cdn.discordapp.com/attachments/728016357106384967/745251841767505990/I-hate-my-job.jpg",
-#   intro: "A bot used to announce that you're going on a villager hunt and for others to keep track on who's currently hunting.",
-#   host: "🐨 Use <span class='command'>i!find *villager / trait / species*</span> to start a hunt and announce who or what you're looking for. <br> 🐨 Use  <span class='command'>i!finish</span> when you're done with your hunt. <br> 🐨 You can check the pins of the <b>🔎villager-hunt</b> channel to see the current hunts. You can also use the command <span class='command'>i!open</span> to get a DM with who's currently hunting and what they're looking for. <br><br> Happy hunting 💚",
-#   queue: "",
-#   template: "i!find *villager / trait / species*",
-#   example: "i!find I'm looking for Raymond, Beardo or any cute frog!",
-#   commands: ""
-# )
-
 isabelle = Bot.create!(
   name: "Isabelle",
   avatar: "https://cdn.discordapp.com/attachments/728016357106384967/745666689714225253/Bot_Isabelle_Head_Transparent.png",
   intro: "A bot used to announce that you're going on a villager hunt and for others to keep track on who's currently hunting.",
-  host: "Coming soon! <br><br> Happy hunting 💚",
+  host: "🐨 Use <span class='command'>i!find *villager / trait / species* </span> or <span class='command'>i!hunt *villager / trait / species* </span> to start a hunt and announce who or what you're looking for. <br> 🐨 Use  <span class='command'>i!finish</span> when you're done with your hunt. <br> 🐨 You can check the pins of the <b>🔎villager-hunt</b> channel to see the current hunts. You can also use the command <span class='command'>i!open</span> to get a DM with who's currently hunting and what they're looking for. <br><br> Happy hunting 💚",
   queue: "",
-  template: "",
-  example: "",
+  template: "i!hunt *villager / trait / species*",
+  example: "i!hunt Sherb Raymond Beardo I'm looking for these 3 or any cute frog, I have 35NMTs to find them!",
   commands: ""
 )
 
@@ -241,7 +230,7 @@ BotChannel.create!(bot: moistmaker, channel: water)
 
 BotChannel.create!(bot: pascal, channel: thank)
 
-# BotChannel.create!(bot: isabelle, channel: hunt)
+BotChannel.create!(bot: isabelle, channel: hunt)
 
 puts "Done linking bots to channels"
 
@@ -632,19 +621,19 @@ Infographic.create!(
 
 Infographic.create!(
   title: "The Mystery of The Lily",
-  image_url: "https://cdn.discordapp.com/attachments/727901653390589954/742107756819120128/LotV.png",
+  image_url: "https://cestislife.github.io/img/LotV.png",
   tags: "lily of the valley, five stars"
 )
 
 Infographic.create!(
   title: "Rock Garden 101 I",
-  image_url: "https://cdn.discordapp.com/attachments/727901653390589954/734925729027850280/grock_01.png",
+  image_url: "https://cestislife.github.io/img/grock_01.png",
   tags: "rocks, rock garden, mannequins"
 )
 
 Infographic.create!(
   title: "Rock Garden 101 II",
-  image_url: "https://cdn.discordapp.com/attachments/727901653390589954/734925731024339004/grock_02.png",
+  image_url: "https://cestislife.github.io/img/grock_02.png",
   tags: "rocks, rock garden, mannequins, toilet"
 )
 
@@ -713,13 +702,13 @@ Infographic.create!(
 
 Infographic.create!(
   title: "Balloons",
-  image_url: "balloons.png",
+  image_url: "https://cestislife.github.io/img/balloons.png",
   tags: "balloons"
 )
 
 Infographic.create!(
   title: "Breeding: From Seed To Sprout",
-  image_url: "breeding.png",
+  image_url: "https://cestislife.github.io/img/breeding.png",
   tags: "flowers, windflowers, cosmos, lily, lilies, pansy, pansies, mums, hyacinths, gold roses, lily of the valley, roses, tulips"
 )
 
@@ -749,13 +738,13 @@ Infographic.create!(
 
 Infographic.create!(
   title: "All Flower Phenotypes",
-  image_url: "phenotype1.png",
+  image_url: "https://cestislife.github.io/img/phenotype1.png",
   tags: "genotypes, windflowers, cosmos, lily, lilies, pansy, pansies, mums, hyacinths, gold roses, lily of the valley, roses, tulips"
 )
 
 Infographic.create!(
   title: "Pocket Camp Promotial Items",
-  image_url: "pocketcamp.png",
+  image_url: "https://cestislife.github.io/img/pocketcamp.png",
   tags: "pocket camp"
 )
 
@@ -773,13 +762,13 @@ Infographic.create!(
 
 Infographic.create!(
   title: "Flower Reproduction Guide",
-  image_url: "reproduce.png",
+  image_url: "https://cestislife.github.io/img/reproduce.png",
   tags: "cloning, breeding, flowers"
 )
 
 Infographic.create!(
   title: "Tools & Their Durability",
-  image_url: "tools.png",
+  image_url: "https://cestislife.github.io/img/tools.png",
   tags: "tools, shovel, axe, water can, slingshot, fishing rod, net"
 )
 
