@@ -54,7 +54,7 @@
     <div class="row justify-content-around mb-5">
       <div class="col-12 col-md-6 d-flex align-items-center flex-column mb-3 mb-md-0">
         <div class="font-weight-bold bot-sub-title mb-3">Happening now ⏱</div>
-        <div class="event-cards">
+        <div class="event-cards w-100">
           <% if @current_events.empty? %>
             <div>
               <div class="event-notice my-5">There's no events happening right now!</div>
@@ -79,7 +79,7 @@
 
       <div class="col-12 col-md-6 d-flex align-items-center flex-column">
         <div class="font-weight-bold bot-sub-title mb-3">Upcoming events 🗓</div>
-        <div class="event-cards">
+        <div class="event-cards w-100">
           <% if @upcoming_events.empty? %>
             <div>
               <div class="event-notice my-5">There's no events coming up the next 30 days!</div>
