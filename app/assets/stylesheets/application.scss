@@ -130,3 +130,11 @@ a {
   }
 }
 
+.test-div {
+  img {
+    max-height: 90vh;
+    max-width: 100%;
+    object-cover: fit;
+  }
+}
+

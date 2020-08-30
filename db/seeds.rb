@@ -205,6 +205,51 @@ AcEvent.create!(
 )
 
 AcEvent.create!(
+  title: "Pine Cone & Acorn Season",
+  description: "Collect pine cones, acorns and obtain the special Fall DIYs during this event.",
+  season: "Northern",
+  event_icon: "https://cdn.discordapp.com/emojis/707346759709491292.png?v=1",
+  from_date: Date.new(2020, 9, 1),
+  to_date: Date.new(2020, 12, 10)
+)
+
+AcEvent.create!(
+  title: "Young Spring Bamboo Season",
+  description: "Collect young spring bamboo and obtain the special Bamboo DIYs during this event.",
+  season: "Southern",
+  event_icon: "https://cdn.discordapp.com/emojis/707346668651282552.png?v=1",
+  from_date: Date.new(2020, 8, 25),
+  to_date: Date.new(2020, 11, 10)
+)
+
+AcEvent.create!(
+  title: "Maple Leaf Season",
+  description: "Collect maple leaves and obtain the special Maple Leaf DIYs during this event.",
+  season: "Northern",
+  event_icon: "https://cdn.discordapp.com/emojis/707345710466465793.png?v=1",
+  from_date: Date.new(2020, 11, 16),
+  to_date: Date.new(2020, 11, 25)
+)
+
+AcEvent.create!(
+  title: "Snowflake Season",
+  description: "Collect snowflakes and obtain the special Winter DIYs during this event.",
+  season: "Northern",
+  event_icon: "https://cdn.discordapp.com/emojis/707344606068473937.png?v=1",
+  from_date: Date.new(2020, 12, 11),
+  to_date: Date.new(2021, 2, 24)
+)
+
+AcEvent.create!(
+  title: "Summer Shell Season",
+  description: "Collect summer shells and obtain the special Summer DIYs during this event.",
+  season: "Southern",
+  event_icon: "https://animalcrossingworld.com/wp-content/uploads/2020/05/animal-crossing-new-horizons-guide-summer-shell-item-icon-36px.png",
+  from_date: Date.new(2020, 12, 1),
+  to_date: Date.new(2021, 2, 28)
+)
+
+AcEvent.create!(
   title: "Bug Off",
   description: "This event runs from 9AM until 6PM.",
   season: "Southern",
