@@ -4,6 +4,6 @@ class AcEvent < ApplicationRecord
   end
 
   def upcoming_event
-    from_date > Date.today && from_date < Date.today + 30
+    from_date > Date.today && from_date < Date.today + 35
   end
 end
